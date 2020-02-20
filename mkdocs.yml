@@ -1,0 +1,37 @@
+# Project information
+site_name: 'TTT2'
+site_description: "A Garry's Mod gamemode based on Trouble in Terrorist Town"
+#site_url: 'https://'
+
+# Repository
+repo_name: 'TTT2'
+repo_url: https://github.com/TTT-2/TTT2/
+edit_uri: https://github.com/TTT-2/docs/edit/master/docs/
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://github.com/TTT-2'
+    - type: 'steam'
+      link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1357204556'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
