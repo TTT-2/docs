@@ -29,7 +29,7 @@ All your addon files have to be placed into `GarrysMod/garrysmod/addons` and are
 ![My Addons Folder](../assets/images/article/folder.png)
 *`addons/` folder with many addons as symbolic links inside*
 
-See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a detailed overview over the standard Garry's Mod project structre.
+See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a detailed overview over the standard Garry's Mod project structure.
 
 #### General Purpose Lua Files
 
