@@ -120,7 +120,7 @@ classData.avoidWeaponReset = <boolean> -- [default: false]
 -- If true, the player won't get the class back on respawn, no matter how the ConVar "ttt_classes_keep_on_respawn" is set
 classData.surpressKeepOnRespawn = <boolean> -- [default: false]
 
--- Should be set to true, if the class is getting active after the players death and should not get removed after death. 
+-- Should be set to true, if the class is getting active after the players death and should not get removed after death.
 -- This information is important for other addons like "TTTC Class Dropper"
 classData.activeDuringDeath = <boolean> -- [default: false]
 ```

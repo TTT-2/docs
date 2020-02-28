@@ -1,3 +1,0 @@
-# Project Structure
-
-Some Text
