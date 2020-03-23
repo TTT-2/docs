@@ -26,6 +26,7 @@ nav:
   - General: 
     - TTT2: 'index.md'
     - Troubleshooting: 'troubleshooting/index.md'
+    - Role Overview: 'features/roles.md'
   - Server Owners:
       - Setting up a Server: 'server-owners/index.md'
   - Developers:
