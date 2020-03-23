@@ -26,11 +26,14 @@ nav:
   - General: 
     - TTT2: 'index.md'
     - Troubleshooting: 'troubleshooting/index.md'
-  - Server owners:
+  - Server Owners:
       - Setting up a Server: 'server-owners/index.md'
   - Developers:
-      - Content creation:
-        - 'developers/content-creation/creating-an-addon.md'
+      - Creating new Content: 'developers/index.md'
+      - Basics:
+        - 'developers/basics/creating-an-addon.md'
+        - 'developers/basics/conding-style.md'
+      - Content Creation:
         - 'developers/content-creation/creating-a-class.md'
         - 'developers/content-creation/creating-a-role.md'
         - 'developers/content-creation/creating-an-item.md'
