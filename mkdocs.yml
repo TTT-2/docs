@@ -32,7 +32,7 @@ nav:
       - Creating new Content: 'developers/index.md'
       - Basics:
         - 'developers/basics/creating-an-addon.md'
-        - 'developers/basics/conding-style.md'
+        - 'developers/basics/code-style.md'
       - Content Creation:
         - 'developers/content-creation/creating-a-class.md'
         - 'developers/content-creation/creating-a-role.md'
