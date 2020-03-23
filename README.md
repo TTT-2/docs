@@ -25,7 +25,7 @@ And their overview on all elements and how they look:
 - https://squidfunk.github.io/mkdocs-material/specimen/
 
 You may want to read up on the markdown extensions that are included and how to use them:
-- https://facelessuser.github.io/pymdown-extensions/extensions
+- https://facelessuser.github.io/pymdown-extensions/
 
 ## Installation
 
@@ -44,3 +44,8 @@ Start the preview with the command (when you are currently in the directory of t
 ```
 mkdocs serve
 ```
+
+## Attribution
+
+This project uses:
+- [Twemoji](https://twemoji.twitter.com/) (Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/)
