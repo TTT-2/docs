@@ -1,6 +1,7 @@
 # TTT2 Documentation / User guide
 
-You can find it here: https://docs.ttt2.neoxult.de
+You can find it here:  
+https://docs.ttt2.neoxult.de
 
 This is the official TTT2 documentation / getting started guide.  
 Feel free to open up a PR with additional entries or fixes.
@@ -11,12 +12,11 @@ Feel free to open up a PR with additional entries or fixes.
 
 If you want to contribute you can always open up a PR on this repository, we are happy about any contribution.  
 All the documentation is written in Markdown and can be easily edited even on Github. Just take a look at the `docs` folder.
+If you want to add a new entry, you will have to add the path to the `.mkdocs.yml` file, right under `nav`.
 
 To check your changes before submitting a PR or making a commit, you can view a local build of the current documentation as described below.
 
 ## Useful resources
-
-
 
 The mkdocs-material documentation is a good start:
 - https://squidfunk.github.io/mkdocs-material/getting-started/
