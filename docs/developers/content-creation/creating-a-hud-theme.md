@@ -2,7 +2,7 @@
 
 ## Basics
 
-A HUD theme is just a normal addon for TTT2 and therefore is in no way different than other addons. Check out the [getting started guide](/developers/content-creation/creating-an-addon) to learn more about creation of addons.
+A HUD theme is just a normal addon for TTT2 and therefore is in no way different than other addons. Check out the [getting started guide](/developers/basics/creating-an-addon) to learn more about creation of addons.
 
 If you want to create a HUD element with the TTT2 system for one of your addons, check out [this article](/developers/content-creation/creating-a-hudelement/).
 
