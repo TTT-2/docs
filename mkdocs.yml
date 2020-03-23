@@ -1,5 +1,5 @@
 # Project information
-site_name: 'TTT2'
+site_name: 'TTT2 Documentation'
 site_description: "A Garry's Mod gamemode based on Trouble in Terrorist Town"
 #site_url: 'https://'
 
@@ -12,12 +12,31 @@ edit_uri: https://github.com/TTT-2/docs/edit/master/docs/
 theme:
   name: 'material'
   language: 'en'
+  feature:
+    tabs: true
   palette:
     primary: 'indigo'
     accent: 'indigo'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+
+# Navigation
+nav:
+  - General: 
+    - TTT2: 'index.md'
+    - Troubleshooting: 'troubleshooting/index.md'
+  - Server owners:
+      - Setting up a Server: 'server-owners/index.md'
+  - Developers:
+      - Content creation:
+        - 'developers/content-creation/creating-an-addon.md'
+        - 'developers/content-creation/creating-a-class.md'
+        - 'developers/content-creation/creating-a-role.md'
+        - 'developers/content-creation/creating-an-item.md'
+        - 'developers/content-creation/creating-a-weapon.md'
+        - 'developers/content-creation/creating-a-hudelement.md'
+        - 'developers/content-creation/creating-a-hud-theme.md'
 
 # Customization
 extra:
@@ -30,8 +49,32 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - codehilite:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
       guess_lang: false
-  - toc:
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
       permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

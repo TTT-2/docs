@@ -7,9 +7,25 @@ Feel free to open up a PR with additional entries or fixes.
 
 > The master branch is always auto deployed to our website.
 
-# Local Testing
+# Contribute
 
-To check your changes before submitting a PR or making a commit, you can view a local build of the current documentation.
+If you want to contribute you can always open up a PR on this repository, we are happy about any contribution.  
+All the documentation is written in Markdown and can be easily edited even on Github. Just take a look at the `docs` folder.
+
+To check your changes before submitting a PR or making a commit, you can view a local build of the current documentation as described below.
+
+## Useful resources
+
+
+
+The mkdocs-material documentation is a good start:
+- https://squidfunk.github.io/mkdocs-material/getting-started/
+
+And their overview on all elements and how they look:
+- https://squidfunk.github.io/mkdocs-material/specimen/
+
+You may want to read up on the markdown extensions that are included and how to use them:
+- https://facelessuser.github.io/pymdown-extensions/extensions
 
 ## Installation
 
