@@ -35,22 +35,22 @@ _They are part of the Traitors Team and must kill everyone that opposes them!_
 |**Hitman**|Has to kill specific targets in order to get a lot of credits!|
 |**Vampire**|May transform into a bat and heal himself after killing a player!|
 
-## Chaotic Killers
+## Neutral Killers
 
-_They are part of individual teams and must kill everyone that opposes them!_
+_They are not a part of any major faction and often form their own minor faction with the goal of taking everyone else down!_
 
-| _Chaotic Killer Roles_ | _Description_ |
+| Neutral Killer Roles_ | _Description_ |
 | - | - |
 |**Infected**|Has to kill everyone! Everyone he kills will become his zombie!|
 |**Jackal**|Has to kill everyone! Can make himself a Sidekick!|
 |**Necromancer**|Has to kill everyone! Can revive players as his zombies!|
 |**Serialkiller**|Has to kill everyone! Also has a wallhack!|
 
-## Chaotic Roles
+## Neutral Roles
 
-_They have individual win conditions and playstyles and may be able to win with multiple factions._
+_They have individual win conditions and playstyles and may be able to win with major or minor factions._
 
-| _Chaotic Roles_ | _Description_ |
+| _Neutral Roles_ | _Description_ |
 | - | - |
 |**Amnesiac**|Needs to confirm a player, then get that players role and win with that role!|
 |**Bodyguard**|Receives a player to protect, joins that players team!|
