@@ -16,8 +16,8 @@ Simple icons are used for role icons, status icons in the sidebar and many diffe
 
 Additionally for both role and status icons, a decent padding should be set. There are no hard limits, however a padding of `10%` on each side is a good guideline.
 
-![Icon Padding](../../assets/images/article/icon_padding.png)
-*Example of the default padding used for role icons*
+???+ abstract "Example of the default padding used for role icons"
+    ![Icon Padding](../../assets/images/article/icon_padding.png)
 
 ### Classic Icons
 
@@ -38,8 +38,8 @@ You start with creating an icon in the image manipulation software of your choic
 
 One thing to keep in mind are [problems with transparent areas](http://www.adriancourreges.com/blog/2017/05/09/beware-of-transparent-pixels/) for simple white icons. It caused us many headaches to figure out the problem described in the linked article. At least photoshop stores transparent areas as black with an opacity of `0`. That looks good on first glance, however the mipmapping procedure creates dark artefacts around the edges that are highly visible.
 
+???+ abstract "Example of a good and bas icon with masks in Photoshop"
 ![Icon Masking](../../assets/images/article/icon_mask.png)
-*Example of a good and bas icon with masks in Photoshop*
 
 A solution to this problem in photoshop is to create a white layer with a mask in the shape of the icon. That way even transparent pixels are counted as white and a good mipmapping result is achieved.
 
@@ -48,8 +48,8 @@ Once the image is exported as a `*.png`, it has to be inported into VTF Edit. On
 ???+ tip
     Press `view -> mask` to show the transparent background.
 
+???+ abstract "Page 1 of the VTF Options, page 2 and 3 can stay the way they are"
 ![Icon VTF Options](../../assets/images/article/vtf_settings.png)
-*Page 1 of the VTF Options, page 2 and 3 can stay the way they are*
 
 In the last step the file has to be exported as a `*.vtf` file. The associated `*.vmt` file can be exported as well. Alternatively it can be created by hand using this template:
 
