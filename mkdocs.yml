@@ -35,8 +35,9 @@ nav:
         - 'developers/basics/creating-an-addon.md'
         - 'developers/basics/code-style.md'
       - Content Creation:
-        - 'developers/content-creation/creating-a-class.md'
+        - 'developers/content-creation/icon-and-design-guideline.md'
         - 'developers/content-creation/creating-a-role.md'
+        - 'developers/content-creation/creating-a-class.md'
         - 'developers/content-creation/creating-an-item.md'
         - 'developers/content-creation/creating-a-weapon.md'
         - 'developers/content-creation/creating-a-hudelement.md'
