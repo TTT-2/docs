@@ -25,8 +25,8 @@ The style of the weapon and perk design is unchanged and [a template can be foun
 2. The icons should have a resolution of **`64px x 64px`**
 3. Perks are red, weapons are blue. Don't use any other colors!
 4. The icon on should follow one of these two styles:
-   1. an image with a small drop shadow by using the ["image_icon" style <sup>[photoshop style]</sup>](https://github.com/TTT-2/ttt_addon_graphics/blob/master/reworked_shop/styles/image_icon.asl)
-   2. by using the ["flat icon" style <sup>[photoshop style]</sup>](https://github.com/TTT-2/ttt_addon_graphics/blob/master/reworked_shop/styles/flat_icon.asl) on a single colored icon
+    1. an image with a small drop shadow by using the ["image_icon" style <sup>[photoshop style]</sup>](https://github.com/TTT-2/ttt_addon_graphics/blob/master/reworked_shop/styles/image_icon.asl)
+    2. by using the ["flat icon" style <sup>[photoshop style]</sup>](https://github.com/TTT-2/ttt_addon_graphics/blob/master/reworked_shop/styles/flat_icon.asl) on a single colored icon
 
 ## Creating a VTF / VMT
 
@@ -41,7 +41,7 @@ One thing to keep in mind are [problems with transparent areas](http://www.adria
 
 A solution to this problem in photoshop is to create a white layer with a mask in the shape of the icon. That way even transparent pixels are counted as white and a good mipmapping result is achieved.
 
-Once the image is exported as a `*.png`, it has to be inported into VTF Edit. On import, a number of settings have to be set once.<br>
+Once the image is exported as a `*.png`, it has to be inported into VTF Edit. On import, a number of settings have to be set once.
 
 >:bulb: Press `view -> mask` to show the transparent background.
 
