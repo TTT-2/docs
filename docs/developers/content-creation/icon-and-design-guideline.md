@@ -2,7 +2,8 @@
 
 The design style of TTT2 builds on top of the TTT design and therefore inherits some of the original designguidelines. If in doubt always choose the more minimalistic design for TTT2.
 
->:bulb: With minor exeptions, icons for TTT2 should always be stored as a `*.vtf`.
+???+ warning
+    With minor exeptions, icons for TTT2 should always be stored as a `*.vtf`.
 
 ## Icon Styles
 
@@ -10,7 +11,8 @@ The design style of TTT2 builds on top of the TTT design and therefore inherits 
 
 Simple icons are used for role icons, status icons in the sidebar and many different areas in the game. They are always a plain white on a transparent background. Small icons (e.g. targetID inline icons) should have a resolution of **`64px x 64px`**, larger icons (e.g. role icons) should have a resolution of **`512px x 512px`**.
 
->:warning: These icons always have to be converted to a `*.vtf` since they need mipmapping for a clear display at different UI scales!
+???+ warning
+    These icons always have to be converted to a `*.vtf` since they need mipmapping for a clear display at different UI scales!
 
 Additionally for both role and status icons, a decent padding should be set. There are no hard limits, however a padding of `10%` on each side is a good guideline.
 
@@ -43,7 +45,8 @@ A solution to this problem in photoshop is to create a white layer with a mask i
 
 Once the image is exported as a `*.png`, it has to be inported into VTF Edit. On import, a number of settings have to be set once.
 
->:bulb: Press `view -> mask` to show the transparent background.
+???+ tip
+    Press `view -> mask` to show the transparent background.
 
 ![Icon VTF Options](../../assets/images/article/vtf_settings.png)
 *Page 1 of the VTF Options, page 2 and 3 can stay the way they are*
