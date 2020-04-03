@@ -1,5 +1,7 @@
 # Creating a Class
 
+Make sure to check out our [basics guide](https://docs.ttt2.neoxult.de/developers/basics/creating-an-addon/) if you have general questions about creating addons for TTT2.
+
 To create a class, the function `CLASS.AddClass(name, classData, conVarData)` has to be called on both client and server.
 
 ```lua
@@ -82,7 +84,7 @@ The `classData` argument is a table that contains all the important class settin
 
     See [the Vendetta](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_vendetta.lua) for an example.
 
-### PASSIVE ABILITY
+### Passive Ability
 
 ???+ example "Passive Weapons"
     A table of weapons given to the player once the class is set, they are automatically removed when the class is removed from the player. You can use the hook `TTTCPreventClassEquipment` to prevent the weapon hand-out and `TTTCPreventClassRemovement` to prevent the weapon removal to happen.
@@ -213,14 +215,14 @@ The `classData` argument is a table that contains all the important class settin
 
 
 ???+ example "On Class Charge Callback"
-    This function is called once every frame after while a player is in the charging process, if the function is set and returns `nil` or `false`, the charging process is stopped.
+    This function is called once every frame after while a player is in the charging process, if the function is set and it returns `nil` or `false`, the charging process is stopped.
 
     ```lua
     classData.onCharge = function(ply) -- [default: nil]
     ```
 
 ???+ example "Check Class Activation Callback"
-    This function is called when the ability should be activated. Activation fails if the function is set and returns `nil` or `false`.
+    This function is called when the ability should be activated. Activation fails if the function is set and it returns `nil` or `false`.
 
     ```lua
     classData.checkActivation = function(ply) -- [default: nil]
@@ -239,6 +241,6 @@ The `conVarData` table holds all default values for the convars to modify the cl
 
 # Other Resources
 
-- See the TTT2 docs for more infotamtion about TTT2 and TTTC hooks [coming soon!]
+- See the TTT2 docs for more information about TTT2 and TTTC hooks [coming soon!]
 - See [this class](https://github.com/TTT-2/tttc-class_shooter/blob/master/lua/classes/classes/class_shooter.lua) for a really simple example
 - Check out [this folder](https://github.com/TTT-2/ttt2h-pack-default/tree/master/lua/classes/classes) and [that folder](https://github.com/TTT-2/tttc-class_pack/tree/master/lua/classes/classes) for a bunch of examples
