@@ -22,25 +22,47 @@ CLASS.AddClass("YOURCLASS", {
 
 Shown in **`example 1`** is a basic class with only a name and a color and no active features. This file has to be stored in `<your_addon>/lua/classes/classes/<this_file>.lua` to be registered automatically on both client and server.
 
-This simple `classData` table can now be extended by all of the following elements:
+## Name
+
+The `name` parameter of the class is a unique identifier for your new class that can be used for example in hooks to make sure they only are active for players of this specific class.
+
+## ClassData
+
+The `classData` argument is a table that contains all the important class settings.
+
+### General Class Settings
+
+???+ example "Setting the Class Color"
+    The class color is stored in the color variable. This color value is used to display the class in the HUD and in other places like targetID.
+
+    ```lua
+    classData.color = <Color> -- [default: Color(255, 155, 0, 255)]
+    ```
+
+???+ example "Setting the Language"
+    The language for the class consists of two parts: The name and the description. At least the name should be set, but it is good practise to set the description as well.
+
+    The existing language identifiers can be found [inside these files](https://github.com/TTT-2/TTT2/tree/master/gamemodes/terrortown/gamemode/shared/lang). Currently these identifiers exist: `English`, `Deutsch`, `Русский`, `Polski`, `Italiano`
+
+    ```lua
+    classData.lang = {}
+    ```
+
+???+ example "Setting Class to Passive"
+    By default, classes are active. This means that they have an ability that is enabled on keypress and can only be used once activated. Besides these active feature, classes can have passive features as well (like armor for a class). However, if your class should only have passive features, set this variable to `true`.
+
+    ```lua
+    classData.passive = <boolean> -- [default: false]
+    ```
+
+???+ example "Deactivate Automatic Class Handling"
+    The class system handles each feature in predefined functions. However you might want to create a really custom class that does not rely on any standard implementations. By setting this variable to `true`, none of the following functions and tables will be used.
+
+    ```lua
+    classData.cdeactivated = <boolean> -- [default: false]
+    ```
 
 ```lua
----
--- GENERAL CLASS SETTINGS
-
--- Sets the color of the class.
-classDara.color = <Color> -- [default: Color(255, 155, 0, 255)]
-
--- Disables the active ability of this class.
-classData.passive = <boolean> -- [default: false]
-
--- Disables all class specific functions. This can be used when all class related things should be
--- handled externally.
-classData.deactivated = <boolean> -- [default: false]
-
--- Sets the language strings of the class that are rendered ingame, at least the name should be set.
-classData.lang = {}
-
 ---
 -- PASSIVE ABILITY DATA
 
