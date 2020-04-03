@@ -48,103 +48,197 @@ The `classData` argument is a table that contains all the important class settin
     classData.lang = {}
     ```
 
-???+ example "Setting Class to Passive"
+???+ example "Setting a Class to Be Passive"
     By default, classes are active. This means that they have an ability that is enabled on keypress and can only be used once activated. Besides these active feature, classes can have passive features as well (like armor for a class). However, if your class should only have passive features, set this variable to `true`.
 
     ```lua
     classData.passive = <boolean> -- [default: false]
     ```
 
+???+ example "Surpress Keep on Respawn"
+    If `true`, the player won't get the class back on respawn, no matter how the ConVar `ttt_classes_keep_on_respawn` is set.
+
+    ```lua
+    classData.surpressKeepOnRespawn = <boolean> -- [default: false]
+    ```
+
+    See [the Vendetta](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_vendetta.lua) for an example.
+
+???+ example "Class is Active During Death"
+    Should be set to `true`, if the class is getting active after the players death and should not get removed after death. This information is important for other addons like "TTTC Class Dropper".
+
+    ```lua
+    classData.activeDuringDeath = <boolean> -- [default: false]
+    ```
+
+    See [the Vendetta](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_vendetta.lua) for an example.
+
 ???+ example "Deactivate Automatic Class Handling"
     The class system handles each feature in predefined functions. However you might want to create a really custom class that does not rely on any standard implementations. By setting this variable to `true`, none of the following functions and tables will be used.
 
     ```lua
-    classData.cdeactivated = <boolean> -- [default: false]
+    classData.deactivated = <boolean> -- [default: false]
     ```
 
-```lua
----
--- PASSIVE ABILITY DATA
+    See [the Vendetta](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_vendetta.lua) for an example.
 
--- A table of weapons given to the player once the class is set, they are automatically
--- remoed when the class is removed from the player.
-classData.passiveWeapons = {}
+### PASSIVE ABILITY
 
--- A table of items given to the player once the class is set, they are automatically
--- remoed when the class is removed from the player.
-classData.passiveItems = {}
+???+ example "Passive Weapons"
+    A table of weapons given to the player once the class is set, they are automatically removed when the class is removed from the player. You can use the hook `TTTCPreventClassEquipment` to prevent the weapon hand-out and `TTTCPreventClassRemovement` to prevent the weapon removal to happen.
 
----
--- ACTIVE ABILITY DATA
+    ```lua
+    classData.passiveWeapons = {}
+    ```
 
--- A table of weapons given to the player once the class is activated, they are automatically
--- removed when the ability is disabled.
-classData.weapons = {}
+???+ example "Passive Items"
+    A table of items given to the player once the class is set, they are automatically removed when the class is removed from the player. You can use the hook `TTTCPreventClassEquipment` to prevent the item hand-out and `TTTCPreventClassRemovement` to prevent the item removal to happen.
 
--- A table of items given to the player once the class is activated, they are automatically
--- removed when the ability is disabled.
-classData.items = {}
+    ```lua
+    classData.passiveItems = {}
+    ```
 
--- A function that is called when this class is given to a player after class change or on respawn
--- You can use the hook "TTTCPreventClassEquipment" to prevent this function & equipment hand-out to happen
-classData.onClassSet = function(ply) [default: nil]
+???+ example "On Class Set Callback"
+    A function that is called when this class is given to a player after class change or on respawn. You can use the hook `TTTCPreventClassEquipment` to prevent this function to happen.
 
--- A function that is called when this class is removed from a player
--- You can use the hook "TTTCPreventClassRemovement" to prevent this function & equipment removement to happen
-classData.onClassUnset = function(ply) [default: nil]
+    ```lua
+    classData.onClassSet = function(ply) -- [default: nil]
+    ```
 
--- A function that is called on activation of an ability. If avoidWeaponReset is equal to false
--- wepons will be removed prior to this function call.
-classData.onActivate = function(ply) [default: nil]
+???+ example "On Class Unset Callback"
+    A function that is called when this class is removed from a player. You can use the hook `TTTCPreventClassRemovement` to prevent this function to happen.
 
--- A function that is called on deactivation of an ability. If avoidWeaponReset is equal to false
--- wepons will be given back prior to this function call.
-classData.onDeactivate = function(ply) [default: nil]
+    ```lua
+    classData.onClassUnset = function(ply) -- [default: nil]
+    ```
 
--- A function that is called prior to onActivate. If it is set, the ability will be activated on the
--- next ability key press.
-classData.onPrepareActivation = function(ply) [default: nil]
+### Active Ability
 
--- This function will only be called if onPrepareActivation was set. It is called on the second
--- press of the ability key and is done directly before onActivate.
--- If the ability was canceled in this process, this function is called prior to onDeactivate.
-classData.onFinishPreparingActivation = function(ply) [default: nil]
+???+ example "Active Weapons"
+    A table of weapons given to the player once the class is activated, they are automatically removed when the class is deactivated or removed from the player.
 
--- This function is called once a player starts the charging process, if returned nil or false, the
--- charging process is stopped.
-classData.onCharge = function(ply) [default: nil]
+    ```lua
+    classData.weapons = {}
+    ```
 
--- This function is called when the ability should be activated. Activation fails if returned nil or false.
-classData.checkActivation = function(ply) [default: nil]
+???+ example "Passive Items"
+    A table of items given to the player once the class is activated, they are automatically removed when the class is deactivated or removed from the player.
 
--- The time how long the ability is enabled after the player activated it
--- if set to 0, onActivate isn't called. You have to use onDeactivated in this case.
-classData.time = <number> -- [default: 60]
+    ```lua
+    classData.items = {}
+    ```
 
--- The cooldown time after the usage of the active ability.
-classData.cooldown = <number> -- [default: 60]
+???+ example "Active Time"
+    The time how long the ability is enabled after the player activated it. If set to `0`, `onActivate` isn't called. You have to use `onDeactivated` in this case. This can be used for classes that have no active ability, but an ability that triggers an event.
 
--- Defines how long the activate key must be pressed to activate the ability, nil for instant.
-classData.charging = <number> -- [default: nil]
+    ```lua
+    classData.time = <number> -- [default: 60]
+    ```
 
--- Defines how many times an ability can be activated per round, nil for infinite times.
-classData.amount = <number> -- [default: nil]
+    See [the Nebula](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_nebula.lua) for an example of an event ability with a time of `0`.
 
--- If true, the time of an ability is infinite.
-classData.endless = <boolean> -- [default: false]
+???+ example "Cooldown Time"
+    The cooldown time after the usage of the active ability.
 
--- If true, the player can not disable the ability once they pressed the ability key.
-classData.unstoppable = <boolean> -- [default: false]
+    ```lua
+    classData.cooldown = <number> -- [default: 60]
+    ```
 
--- If false, all weapons will be removed while the player uses their ability.
-classData.avoidWeaponReset = <boolean> -- [default: false]
+???+ example "Charging Time"
+    Defines how long the activation key must be pressed to activate the ability, `nil` for instant activation.
 
--- If true, the player won't get the class back on respawn, no matter how the ConVar "ttt_classes_keep_on_respawn" is set
-classData.surpressKeepOnRespawn = <boolean> -- [default: false]
+    ```lua
+    classData.charging = <number> -- [default: nil]
+    ```
 
--- Should be set to true, if the class is getting active after the players death and should not get removed after death.
--- This information is important for other addons like "TTTC Class Dropper"
-classData.activeDuringDeath = <boolean> -- [default: false]
-```
+???+ example "Max Activation Amount Per Round"
+    Defines how many times an ability can be activated per round, `nil` for infinite times.
 
-Check out [this folder](https://github.com/TTT-2/ttt2h-pack-default/tree/master/lua/classes/classes) for a bunch of examples or [this class](https://github.com/TTT-2/tttc-class_shooter/blob/master/lua/classes/classes/class_shooter.lua) for a really simple example.
+    ```lua
+    classData.amount = <number> -- [default: nil]
+    ```
+
+???+ example "Endless Class Ability"
+    If `true`, the time of an ability is infinite and `time` is ignored.
+
+    ```lua
+    classData.endless = <boolean> -- [default: false]
+    ```
+
+???+ example "Unstoppable Class Ability"
+    If `true`, the player can not disable the ability once they pressed the ability key.
+
+    ```lua
+    classData.unstoppable = <boolean> -- [default: false]
+    ```
+
+???+ example "Avoid Weapon Reset"
+    By default, all weapons from the player inventory get removed once they activate their class ability. These weapons are given back after the ability is deactivated. If set to `true`, the player keeps his weapons while the class ability is active.
+
+    ```lua
+    classData.avoidWeaponReset = <boolean> -- [default: false]
+    ```
+
+???+ example "On Class Activate Callback"
+    A function that is called on activation of an ability. If `avoidWeaponReset` is set to `false` weapons will be removed prior to this function call.
+
+    ```lua
+    classData.onActivate = function(ply) -- [default: nil]
+    ```
+
+???+ example "On Class Deactivate Callback"
+    A function that is called on deactivation of an ability. If `avoidWeaponReset` is set to `false` weapons will be given back prior to this function call.
+
+    ```lua
+    classData.onDeactivate = function(ply) -- [default: nil]
+    ```
+
+???+ example "On Class Prepare Callback"
+    A function that is called prior to `onActivate`. If this function is set, the ability will be activated on the next ability-key press. This can be used to have a two step activation procedure
+
+    ```lua
+    classData.onPrepareActivation = function(ply) -- [default: nil]
+    ```
+
+    See [the Frost](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_frost.lua) for an example.
+
+???+ example "On Class Finish Prepare Callback"
+    This function will only be called if `onPrepareActivation` was set. It is called on the second press of the ability key and is done directly before `onActivate`. If the ability was canceled in this process, this function is called prior to `onDeactivate`.
+
+    ```lua
+    classData.onFinishPreparingActivation = function(ply) -- [default: nil]
+    ```
+
+    See [the Frost](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_frost.lua) for an example.
+
+
+???+ example "On Class Charge Callback"
+    This function is called once every frame after while a player is in the charging process, if the function is set and returns `nil` or `false`, the charging process is stopped.
+
+    ```lua
+    classData.onCharge = function(ply) -- [default: nil]
+    ```
+
+???+ example "Check Class Activation Callback"
+    This function is called when the ability should be activated. Activation fails if the function is set and returns `nil` or `false`.
+
+    ```lua
+    classData.checkActivation = function(ply) -- [default: nil]
+    ```
+
+## ConVarData
+
+The `conVarData` table holds all default values for the convars to modify the class.
+
+???+ example "Class Random"
+    This defines the spawn chance of a class.
+
+    ```lua
+    conVarData.random = <number> -- [default: 100]
+    ```
+
+# Other Resources
+
+- See the TTT2 docs for more infotamtion about TTT2 and TTTC hooks [coming soon!]
+- See [this class](https://github.com/TTT-2/tttc-class_shooter/blob/master/lua/classes/classes/class_shooter.lua) for a really simple example
+- Check out [this folder](https://github.com/TTT-2/ttt2h-pack-default/tree/master/lua/classes/classes) and [that folder](https://github.com/TTT-2/tttc-class_pack/tree/master/lua/classes/classes) for a bunch of examples
