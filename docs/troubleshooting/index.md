@@ -11,8 +11,8 @@
 ## Addon checker
 The integrated addon checker will check for known incompatible addons using a curated list and will inform you about many known incompatible addons and possible replacements. The output is printed to the server log / the console, when the gamemode loads. These addons may still work, but are **not recommended** and should be removed when troubleshooting a problem.
 
-![Addonchecker example output](../assets/images/troubleshooting/addonchecker.png)  
-*Example output found in the server log*
+???+ abstract "Example Output Found in the Server Log"
+    ![Addonchecker example output](../assets/images/troubleshooting/addonchecker.png)
 
 ## FAQ
 

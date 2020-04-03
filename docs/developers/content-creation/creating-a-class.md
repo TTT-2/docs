@@ -1,6 +1,6 @@
 # Creating a Class
 
-Make sure to check out our [basics guide](https://docs.ttt2.neoxult.de/developers/basics/creating-an-addon/) if you have general questions about creating addons for TTT2.
+Make sure to check out our [basics guide](/developers/basics/creating-an-addon/) if you have general questions about creating addons for TTT2.
 
 To create a class, the function `CLASS.AddClass(name, classData, conVarData)` has to be called on both client and server.
 
