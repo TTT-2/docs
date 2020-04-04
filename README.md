@@ -32,7 +32,7 @@ You may want to read up on the markdown extensions that are included and how to 
 Make sure to install [mkdocs-material](https://github.com/squidfunk/mkdocs-material) first.  
 The easiest way would be installing it with pip:
 ```
-pip install mkdocs-material
+pip install "mkdocs-material>=5.0.0rc4"
 ```
 
 otherwise you will have to look at the other installation methods, provided by mkdocs-material.

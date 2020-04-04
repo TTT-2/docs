@@ -12,8 +12,9 @@ edit_uri: https://github.com/TTT-2/docs/edit/master/docs/
 theme:
   name: 'material'
   language: 'en'
-  feature:
-    tabs: true
+  features:
+    - tabs
+    - instant
   palette:
     primary: 'indigo'
     accent: 'indigo'
@@ -47,9 +48,9 @@ nav:
 extra:
   manifest: 'manifest.webmanifest'
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github-alt'
       link: 'https://github.com/TTT-2'
-    - type: 'steam'
+    - icon: 'fontawesome/brands/steam'
       link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1357204556'
 
 # Extensions
@@ -83,4 +84,5 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed
   - pymdownx.tilde
