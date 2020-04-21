@@ -25,8 +25,8 @@
 
     | _Detective Roles_ | _Description_ |
     | - | - |
-    |**Deputy**||
-    |**Detective**|An Innocent with access to special equipment!|
+    |**Deputy**|You are the Sheriffs deputy, help the Sheriff as best as you can!|
+    |**Detective**|A public Innocent with access to special equipment!|
     |**Sheriff**|You can make yourself a Deputy using your Deputy Deagle!|
     |**Sniffer**|Instead of a DNA scanner you have a magnifying glass to find evildoers!|
 
@@ -38,9 +38,9 @@
     | - | - |
     |**Graverobber**|A Traitor will become this if the Ankh is placed, steal the Pharaohs Ankh!|
     |**Hitman**|Has to kill specific targets in order to get a lot of credits!|
-    |**Supervillain**||
-    |**Totemhunter**||
-    |**Traitor**|The 'bad' guys, just like you know them.|
+    |**Supervillain**|Destroy crystals to earn credits!|
+    |**Totemhunter**|Destroy totems to earn credits!|
+    |**Traitor**|The 'bad' guys, just like you know them!|
     |**Vampire**|May transform into a bat and heal himself after killing a player!|
 
 === "Neutral Killers"
