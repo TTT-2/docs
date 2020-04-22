@@ -2,15 +2,14 @@
 
 This is a Guide for the most 'manual' install you can do. If you want a more automated setup, parts of this guide may still apply but you could give something like [LinuxGSM](https://linuxgsm.com/lgsm/gmodserver/) a look.
 
-## Reference Guides from Gmod Wiki and Valve Wiki
-
-- [Downloading SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD)
-- [Downloading Game Content (e.g. CSS, TF2)](https://wiki.facepunch.com/gmod/Downloading_Game_Content_to_a_Dedicated_Server)
-- [Mounting Game Content](https://wiki.facepunch.com/gmod/Mounting_Content_on_a_Dedicated_Server)
-- [Linux Dedicated Server Hosting](https://wiki.facepunch.com/gmod/Linux_Dedicated_Server_Hosting)
-- [Steam Game Server Accounts](https://wiki.facepunch.com/gmod/Steam_Game_Server_Accounts)
-- [Workshop Collection for Dedicated Servers](https://wiki.facepunch.com/gmod/Workshop_for_Dedicated_Servers)
-- [Known Issues](https://developer.valvesoftware.com/wiki/SteamCMD#Known_issues)
+??? quote "Reference Guides from Gmod Wiki and Valve Wiki"
+    - [Downloading SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD)
+    - [Downloading Game Content (e.g. CSS, TF2)](https://wiki.facepunch.com/gmod/Downloading_Game_Content_to_a_Dedicated_Server)
+    - [Mounting Game Content](https://wiki.facepunch.com/gmod/Mounting_Content_on_a_Dedicated_Server)
+    - [Linux Dedicated Server Hosting](https://wiki.facepunch.com/gmod/Linux_Dedicated_Server_Hosting)
+    - [Steam Game Server Accounts](https://wiki.facepunch.com/gmod/Steam_Game_Server_Accounts)
+    - [Workshop Collection for Dedicated Servers](https://wiki.facepunch.com/gmod/Workshop_for_Dedicated_Servers)
+    - [Known Issues](https://developer.valvesoftware.com/wiki/SteamCMD#Known_issues)
 
 ## Prerequisites
 
@@ -32,7 +31,7 @@ OS: Ubuntu-18.04 64-Bit
 
 ### Software Packages
 
-There are some packages we will need. You can get them running the following command with root privileges:
+There are some packages we will need. You can get them by running the following command with root privileges:
 
 === "Debian/Ubuntu"
 
@@ -60,24 +59,35 @@ There are some packages we will need. You can get them running the following com
 
 ### Server User Setup
 
-We don't want our Garrysmod server to run as root or as our sudo user, so we will create a new unpriviliged user (in this case named `steam`):
+We don't want our Garrysmod server to run as root or as our sudo user, so we will create a new unprivileged user (in this case named `steam`):
 
 ```bash
 sudo useradd -m steam
 ```
 
-All commands from now on will be run by that user, so we need to switch to it:
+All commands from now on will be run by that user, there are two ways you can switch to that user:
 
-```bash
-sudo su steam
-```
+=== "Variant 1"
 
-You can also set a password for that user and login directly afterwards:
+    Don't set a password and use your root privileges to switch to that user:
 
-```bash
-sudo passwd steam
-su steam
-```
+    ```bash
+    sudo su steam
+    ```
+
+=== "Variant 2"
+
+    Run the following command to set a password:
+
+    ```bash
+    sudo passwd steam
+    ```
+
+    From now on you can directly login to that user with the name and password. As we are already logged in, we will simply switch users: 
+
+    ```bash
+    su steam
+    ```
 
 ### Things to look out for
 
@@ -133,7 +143,7 @@ After that we can install/update:
 app_update 4020 -validate
 ```
 
-!!! note
+!!! tip
     You will need the last two commands everytime you want/need to update your server installation.
 
 Now we need the same commands slightly modified for the CSS files:
@@ -192,37 +202,41 @@ Simply remove the `//` from the `"cstrike"` and change the path according to the
 }
 ```
 
-Save the file and then quit out of the editor - for nano you do that with `CTRL+S` and then `CTRL+X`.
+Save the file and then quit out of the editor.
+
+!!! info
+    For nano you do that with ++ctrl+s++ and then ++ctrl+x++.
+
 Now CSS will be mounted when you start your Gmod server.
 
 ### Server.cfg / Autoexec.cfg
 
 These two files are primarily used to configurate your server as they are executed automatically. They are located at `/home/steam/gmod_ds/garrysmod/cfg/`. `autoexec.cfg` is executed everytime the server starts; `server.cfg` is executed everytime a mapchange occurs.
 
-A minimal .cfg file could look like this:
+!!! example "A minimal .cfg file could look like this:"
 
-```cfg
-hostname "server name"
-sv_password ""
-sv_allowdownload 0
-sv_allowupload 0
-sv_timeout 60
+    ```cfg
+    hostname "server name"
+    sv_password ""
+    sv_allowdownload 0
+    sv_allowupload 0
+    sv_timeout 60
 
-log on
-sv_logbans 1
-sv_logecho 0
-sv_logfile 1
-sv_log_onefile 0
+    log on
+    sv_logbans 1
+    sv_logecho 0
+    sv_logfile 1
+    sv_log_onefile 0
 
-sv_minrate 0
-sv_maxrate 20000
-sv_maxupdaterate 66
-sv_minupdaterate 10
+    sv_minrate 0
+    sv_maxrate 20000
+    sv_maxupdaterate 66
+    sv_minupdaterate 10
 
-//execute ban files
-exec banned_ip.cfg
-exec banned_user.cfg
-```
+    //execute ban files
+    exec banned_ip.cfg
+    exec banned_user.cfg
+    ```
 
 If you don't want random people connecting set `sv_password` to something.
 
@@ -250,16 +264,22 @@ Next you need to get the ID of that collection and add it to your server start c
 ~/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection 2052244154
 ```
 
+??? question "Find the ID of a collection or Addon"
+
+    You can find the ID of any Workshop Addon/Collection at the end of the URL.
+
+    [https://steamcommunity.com/sharedfiles/filedetails/?id=**2052244154**](https://steamcommunity.com/sharedfiles/filedetails/?id=2052244154)
+
 ### ULX
 
 I highly suggest using ULX as it makes many things easier. You will need [ULX](https://steamcommunity.com/sharedfiles/filedetails/?id=557962238), [ULib](https://steamcommunity.com/sharedfiles/filedetails/?id=557962280) and [ULX Commands for TTT2](https://steamcommunity.com/sharedfiles/filedetails/?id=1362430347).
 
-!!! note
+!!! tip
     These 3 addons are already inside the collection I'm using in the example. If you are making your own collection don't forget to add those 3!
 
 Set yourself as superadmin so you can change the server settings. Just be connected to the server and type the following into the serverconsole. Replace "your username" with your steamname!
 
-!!! note
+!!! info
     The `""` are only needed if your steamname contains whitespaces.
 
 ```console
@@ -277,7 +297,11 @@ mkdir -p ~/.steam/sdk32
 ln -s ~/steam/linux32/steamclient.so ~/.steam/sdk32/steamclient.so
 ```
 
-### Setup (multiple) Startscripts
+### Setup Start- and Updatescripts
+
+??? "**Coming soon**"
+
+### Add Addons from outside the Workshop
 
 ??? "**Coming soon**"
 
