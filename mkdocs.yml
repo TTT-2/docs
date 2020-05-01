@@ -29,7 +29,9 @@ nav:
     - Troubleshooting: 'troubleshooting/index.md'
     - Role Overview: 'features/roles.md'
   - Server Owners:
-      - Setting up a Server: 'server-owners/index.md'
+      - Using TTT2: 'server-owners/index.md'
+      - Serverinstall Guides:
+        - 'server-owners/manual-install.md'
   - Developers:
       - Creating new Content: 'developers/index.md'
       - Basics:
