@@ -9,7 +9,7 @@
     | <div style="width:100%">_Innocent Roles_</div> | _Description_ |
     | - | - |
     |**Clairvoyant**|Has knowledge about whether a player has a special role or not!|
-    |**Innocent**|The 'good' guys, just like you know them.|
+    |**Innocent**|The 'good' guys, just like you know them!|
     |**Occultist**|Will be revived upon death if he fell below 25 HP before dying!|
     |**Pharaoh**|Can place an Ankh! If he owns it when he dies he will respawn!|
     |**Priest**|You can mark people with your Holy Deagle to confirm them as Innocents!|
@@ -17,7 +17,7 @@
     |**Spy**|You infiltrated the Traitors and look like one to them!|
     |**Survivalist**|You have the benefit of having a shop! |
     |**Trapper**|You may use Traitor buttons!|
-    |**Wrath**|If another Innocent kills you, you will be brought back as a Traitor.|
+    |**Wrath**|If another Innocent kills you, you will be brought back as a Traitor!|
 
 === "Detective Roles"
 
