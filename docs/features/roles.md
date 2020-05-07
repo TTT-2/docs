@@ -9,6 +9,7 @@
     | <div style="width:100%">_Innocent Roles_</div> | _Description_ |
     | - | - |
     |**Clairvoyant**|Has knowledge about whether a player has a special role or not!|
+    |**Cupid**|Can make two players fall in love, they will die together!|
     |**Innocent**|The 'good' guys, just like you know them!|
     |**Occultist**|Will be revived upon death if he fell below 25 HP before dying!|
     |**Pharaoh**|Can place an Ankh! If he owns it when he dies he will respawn!|
