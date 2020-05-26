@@ -68,8 +68,9 @@
     |**Jester**|You have to convince other players to kill you!|
     |**Marker**|Has to mark everyone with the marker's gun in order to win!|
     |**Pirate**|You can give a player your contract and join their team!|
+    |**Sidekick**|Help the one that made you a Sidekick win!|
     |**Unknown**|Has to die by another player and will become that players role!|
-
+    
 ## Reasons to use
 
 You don't want the Traitors to feel as safe? Just add any of the **Neutral Killers** to your server. Now even Traitors have to fear getting killed!
