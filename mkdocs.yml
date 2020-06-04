@@ -45,6 +45,7 @@ nav:
         - 'developers/content-creation/creating-a-weapon.md'
         - 'developers/content-creation/creating-a-hudelement.md'
         - 'developers/content-creation/creating-a-hud-theme.md'
+        - 'developers/content-creation/sidebar-population.md'
 
 # Customization
 extra:
