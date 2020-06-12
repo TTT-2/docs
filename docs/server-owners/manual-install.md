@@ -19,23 +19,31 @@ RAM, networkspeeds, storagespace and cpu-clock requirements heavily depend on di
 
 Also note ARM-based CPUs won't work (e.g. RaspberryPi).
 
-Specs of my test-system (just for reference):
+??? "Specs of my test-systems (just for reference):"
 
-```
-CPU: 2 logical Cores @2.1Ghz x86_64
-RAM: 4Gb DDR3 (ECC non-buffered 1333Mhz)
-Storage: 32Gb HDD
-Network: 100/30 MBit up/down
-OS: Ubuntu-18.04 64-Bit
-```
+    ```
+    CPU: 2 logical Cores @2.1Ghz x86_64
+    RAM: 4Gb DDR3 (ECC non-buffered 1333Mhz)
+    Storage: 32Gb HDD
+    Network: 100/30 MBit down/up
+    OS: Ubuntu-18.04 64-Bit
+    ```
 
-```
-CPU: 1 logical Core @3.5Ghz x86_64
-RAM: 4Gb DDR3 (ECC non-buffered 1333Mhz)
-Storage: 32Gb HDD
-Network: 100/30 MBit up/down
-OS: Ubuntu-20.04 64-Bit
-```
+    ```
+    CPU: 1 logical Core @3.5Ghz x86_64
+    RAM: 4Gb DDR3 (ECC non-buffered 1333Mhz)
+    Storage: 32Gb HDD
+    Network: 100/30 MBit down/up
+    OS: Ubuntu-20.04 64-Bit
+    ```
+
+    ```
+    CPU: 4 logical Cores @1,5Ghz x86_64
+    RAM: 8Gb DDR3 (non-ECC 1333Mhz)
+    Storage: 60Gb SSD
+    Network: 100/30 MBit down/up
+    OS: Fedora32 64-Bit
+    ```
 
 ### Software Packages
 
@@ -44,7 +52,7 @@ There are some packages we will need. You can get them by running the following 
 === "Debian/Ubuntu"
 
     ```bash
-    apt install lib32gcc1 lib32stdc++6 lib32tinfo5 wget screen
+    apt install lib32gcc1 lib32stdc++6 lib32tinfo5 wget
     ```
 
 === "RedHat/CentOS"
@@ -53,17 +61,18 @@ There are some packages we will need. You can get them by running the following 
         These should be the right packages, but I did not test them.
 
         ```bash
-        yum install glibc.i686 libstdc++.i686 ncurses-compat-libs wget screen 
+        yum install glibc.i686 libstdc++.i686 ncurses-compat-libs.686 wget
         ```
 
 === "Fedora"
 
-    !!! warning
-        These should be the right packages, but I did not test them.
+    ```bash
+    dnf install glibc.i686 libstdc++.i686 ncurses-compat-libs.i686 wget
+    ```
 
-        ```bash
-        dnf install glibc.i686 libstdc++.i686 ncurses-compat-libs wget screen 
-        ```
+!!! note
+
+    Optional package to install: `tmux` -> can be used in the [startscripts](#setup-start-and-updatescripts) section.
 
 ### Server User Setup
 
@@ -325,14 +334,28 @@ adduser "your username" superadmin
 
 ## Further Configuration
 
-### Steamclient.so Fix
+### Use a Steam Game Server Account
 
-The gameserver looks for the steamclient in a specific location where it is not installed to by default. We fix this by creating the directory and using a symlink:
+Go to this [Steam Page](https://steamcommunity.com/dev/managegameservers) make sure you match the account requirements and then create a game server account.
+
+Starting with the Garry's Mod May 2020 update, servers without a game server account will experience a low ranking in the serverbrowser.
+
+Also keep in mind each game server account is only useable by one server instance at a time. You can't use one account on multiple server instances simultaneously.
+
+You will need to enter two things:
+
+- The App ID of the base game this is `4000` for Garry's Mod (DO NOT use `4020` here)
+- a memo to remember what server the game account is for
+
+Now to use the account with your server simply add `+sv_setsteamaccount` followed by the generated token to your startcommand, like so:
 
 ```bash
-mkdir -p ~/.steam/sdk32
-ln -s ~/steam/linux32/steamclient.so ~/.steam/sdk32/steamclient.so
+~/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection 2052244154 +sv_setsteamaccount WHATEVERYOURTOKENIS
 ```
+
+!!! note
+
+    Tokens will expire if you don't use them for a long time. In that case just visit the [Steam Page](https://steamcommunity.com/dev/managegameservers) again, regenerate the token and update your startcommand to use the regenerated token.
 
 ### Setup Start- and Updatescripts
 
@@ -345,7 +368,55 @@ mkdir ~/startscripts/ # create the directory
 cd ~/startscripts/ # move inside the created directory
 ```
 
+Open a new script file:
 
+```bash
+nano ttt2_server.sh
+```
+
+The minimal script will only be the startcommand from earlier, the advanced script uses `tmux` to put the serverconsole in another terminal.
+
+!!! example "Minimal Script"
+
+    ```bash
+    ~/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection 2052244154 +sv_setsteamaccount WHATEVERYOURTOKENIS
+    ```
+
+??? example "'Advanced' Script"
+
+    ```bash
+    #!/bin/bash
+
+    echo "Starting Histalek's TTT2 Server. Connect to the serverconsole with 'tmux a -t ttt2'!"
+    tmux new -d -s ttt2 '~/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection 2052244154 +sv_setsteamaccount WHATEVERYOURTOKENIS'
+    ```
+
+    The first line simply prints the string into your console to remind you which command lets you connect to the serverconsole, because the second line will start the server in the background.
+
+Now we need to make the script executable for our user:
+
+```bash
+chmod u+x ttt2_server.sh
+```
+
+To start the server you can now type:
+
+```bash
+./ttt2_server.sh
+```
+
+### Steamclient.so Fix
+
+!!! note
+    If you do not spot an error message regarding `steamclient.so` you will not need to do this.  
+    If you see `[S_API] SteamAPI_Init(): Loaded 'steamclient.so' OK.` you are fine.
+
+The gameserver looks for the steamclient in a specific location where it is not installed to by default. We fix this by creating the directory and using a symlink:
+
+```bash
+mkdir -p ~/.steam/sdk32
+ln -s ~/steam/linux32/steamclient.so ~/.steam/sdk32/steamclient.so
+```
 
 ### Add Addons from outside the Workshop
 
@@ -356,15 +427,10 @@ The biggest problem with this is the clients who join the Server need to get the
 This means either:
 
 - the clients have to download the files directly from the server
-    - which you would need to allow in the `server.cfg` with `sv_allowdownload 1`
-    - which takes up serverressources (CPU-time and bandwidth mostly)  
+  - which you would need to allow in the `server.cfg` with `sv_allowdownload 1`
+  - which takes up serverressources (CPU-time and bandwidth mostly)  
 - you would need to setup 'FastDL'
-    - not recommended as it is a hassle to setup and brings another level of potential issues
-
-### Create a Steam Game Server Account
-
-??? "**Coming soon**"
-    [reference](https://steamcommunity.com/dev/managegameservers)
+  - not recommended as it is a hassle to setup and brings another level of potential issues
 
 ### Use the Garrysmod 64-Bit Version
 
