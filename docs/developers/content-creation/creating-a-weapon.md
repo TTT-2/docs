@@ -20,3 +20,4 @@ If you want it to be compatible with sandbox, put a copy of your lua file in:
  
 See the [Creating An Addon](https://docs.ttt2.neoxult.de/developers/basics/creating-an-addon/) page for more info on folder structure
  
+Here is a template weapon for reference:
