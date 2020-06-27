@@ -14,3 +14,5 @@ Your addon folder must be in this format.
   weapon_ttt_<weapon name>\materials\models\<model name>.dx80
   weapon_ttt_<weapon name>\materials\models\<model name>.dx80
   weapon_ttt_<weapon name>\materials\models\<model name>.dx80
+If you want it to be compatible with sandbox, put a copy of your lua file in:
+  weapon_ttt_<weapon name>\lua\weapons\weapon_ttt_<weapon name>.lua
