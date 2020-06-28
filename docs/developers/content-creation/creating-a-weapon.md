@@ -15,7 +15,7 @@ Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be 
 * `\weapon_ttt_<weapon name>\materials\vgui\ttt\<weapon name>_icon.vtf`
 * `\weapon_ttt_<weapon name>\materials\vgui\ttt\<weapon name>_icon.vmt`
 
-See the [Creating An Addon](https://docs.ttt2.neoxult.de/developers/basics/creating-an-addon/) page for more info on folder structure
+See the [Creating An Addon](../../basics/creating-an-addon/#project-structure) page for more info on folder structure.
 
 ## Important 'Structural' features
 
