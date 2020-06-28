@@ -47,7 +47,10 @@ See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a de
 ## Windows
 In order to upload your addon to the Steam Workshop, you need to first compile it into a .gma file.
 1. Your addon file must contain an "addon.json". This consists of a key:value pair table with information used by the Steam Workshop to create tags for uploads.
-It should have a structure like [this](asset missing)
+It should have a structure like this:
+
+![addon_json.png](../../assets/images/article/addon.json.png)
+
 Type is the category which this addon fits into best. One of:
 "ServerContent",
 "gamemode",
