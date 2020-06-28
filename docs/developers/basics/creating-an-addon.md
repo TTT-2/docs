@@ -80,7 +80,7 @@ In order to upload your addon to the Steam Workshop, you need to first compile i
     - "comic",
     - "build"
 
-    Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file
+    Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file.
 
 1. Navigate to your GarrysMod bin directory. (Usually in `Steam\steamapps\common\GarrysMod\bin`).
 
