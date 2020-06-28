@@ -82,9 +82,13 @@ Ignore is what files (you can use the \* as a wildcard to ignore file extensions
 3. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your original folder came from.
 Alternatively you can use the cmd which gives you better error messages. Navigate to the GMod bin folder on the cmd and type gmad.exe, this gives you the gmad usage info. Input the dir to your addon folder and specify the output file directory and name.
 
+![gmad_info.png](../../assets/images/article/gmad_info.png)
+
 4. Navigate to the bin folder via cmd to use gmpublish.exe.
 
 5. Type gmpublish.exe to view usage information, input your icon and .gma paths in their respective fields.
+
+![gmpublish_info.png](../../assets/images/article/gmpublish_info.png)
 
 6. You have now published your addon onto the steam workshop. Visit the addon in the workshop via the link that gmpublish gives you to add information to it and make it public.
 
