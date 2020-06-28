@@ -49,9 +49,8 @@ See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a de
 
 In order to upload your addon to the Steam Workshop, you need to first compile it into a .gma file.
 
-1. Your addon file must contain an "addon.json" within the `<addon name>/` directory of your folder. This consists of a key:value pair table with information used by the Steam 
-
-    Workshop to create tags for uploads.
+1. Your addon file must contain an "addon.json" within the `<addon name>/` directory of your folder. This consists of a key:value pair table with information used by the Steam
+Workshop to create tags for uploads.
     It should have a structure like this:
 
     ![addon_json.png](../../assets/images/article/addon_json.png)
@@ -66,7 +65,7 @@ In order to upload your addon to the Steam Workshop, you need to first compile i
     - "npc",
     - "tool",
     - "effects",
-    - "model"
+    - "model".
 
     Tags are what describes your addon best. Choose two of:
 
@@ -78,15 +77,15 @@ In order to upload your addon to the Steam Workshop, you need to first compile i
     - "cartoon",
     - "water",
     - "comic",
-    - "build"
+    - "build".
 
-    Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file
+    Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file.
 
 1. Navigate to your GarrysMod bin directory. (Usually in `Steam\steamapps\common\GarrysMod\bin`).
 
 1. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your original folder came from.
 
-    Alternatively you can use the cmd which gives you better error messages. Navigate to the GMod bin folder on the cmd and type gmad.exe, this gives you the gmad usage info. Input the dir to your addon folder and specify the output file directory and name.
+    Alternatively you can use the cmd which gives you better error messages. Navigate to the GMod bin folder on the cmd and type gmad.exe, this gives you the gmad usage info. Input the directory to your addon folder and specify the output file directory and name.
 
     ![gmad_info.png](../../assets/images/article/gmad_info.png)
 

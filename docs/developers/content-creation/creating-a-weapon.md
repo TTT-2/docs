@@ -17,7 +17,7 @@ Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be 
 
 See the [Creating An Addon](../../basics/creating-an-addon/#project-structure) page for more info on folder structure.
 
-## Important 'Structural' features
+## General setup
 
 ### If SERVER Block
 
@@ -30,9 +30,10 @@ if SERVER then
    resource.AddFile("materials/vgui/ttt/blue_template_icon.vmt")
 end
 ```
+
 It's very important to create a globally unique name for this because the Gmod
 client will look for the given path locally to display it. So if there are two
-identical icon names the client may display the incorrect one
+identical icon names the client may display the incorrect one.
 
 ### If CLIENT Block
 
@@ -40,7 +41,6 @@ identical icon names the client may display the incorrect one
 if CLIENT then
    -- Client viewpoint vals
    SWEP.PrintName          = "Template Weapon"
-   SWEP.Slot               = 6 -- (See SWEP.Kind below)
    SWEP.ViewModelFOV       = 70 -- How much of the first person viewmodel is seen
    SWEP.ViewModelFlip      = true -- If true, the viewmodel is on the left
    SWEP.DrawCrossHair      = false -- Does the client draw its own crosshair over the default ones
@@ -56,14 +56,13 @@ if CLIENT then
 end
 ```
 
-
-
 ## Important SWEP values
 
 ```lua
 -- What weapon this is based upon (always use weapon_tttbase when creating a ttt/2 weapon)
 SWEP.Base                  = "weapon_tttbase"
 ```
+
 The TTT2 gamemode has a file which describes the default values and methods. Any SWEP which specifies weapon_tttbase inherits the attributes and methods unless specified.
 
 ```lua
@@ -79,7 +78,8 @@ SWEP.Primary.Sound         = Sound("Weapon_AK47.Single") -- Either a sound file 
 SWEP.Primary.NumShots      = 1 -- Number of shots fired at one time (make into shotgun if increase conde val)
 SWEP.Primary.Recoil        = 1.5 -- Recoil value (bigger = bigger)
 ```
-Note that all of these attributes can also be applied to SWEP.Secondary which is alt click if you disable ironsights
+
+Note all of these attributes can also be applied to SWEP.Secondary which is alt click if you disable ironsights.
 
 ```lua
 SWEP.HoldType              = "ar2"
@@ -98,6 +98,7 @@ SWEP.DeploySpeed           = 0.2 -- Lower the slower
 SWEP.IronSightsPos         = Vector(-2, -5, 0) -- Moves the Viewmodel by this vector when using ironsights
 SWEP.IronSightsAng         = Vector(-2, 0, 0) -- Rotates the Viewmodel by this angle when using ironsights
 ```
+
 These are most of the other miscellaneous values which can also be applied to the SWEP (That I have found, if any others are found to be applicable to TTT2 please notify us). Note that if any of these values are not explicitly stated in your lua file they will inherit the weapon_tttbase ones, or cause errors.
 
 ```lua
@@ -107,12 +108,14 @@ SWEP.Kind                 = WEAPON_EQUIP1 -- Kind specifies what weapon_ttt cate
    (WEAPON_ MELEE, HEAVY, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2, ROLE) SWEP.Kind
 --]]
 ```
+
 +1 to the SWEP.Slot get the eqip slot key
 
 ```lua
 SWEP.CanBuy                = {ROLE_TRAITOR} -- Which roles can purchase this swep (table)
 ```
-This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_\<ROLE NAME>
+
+This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_\<ROLE NAME>.
 
 ## Template
 
