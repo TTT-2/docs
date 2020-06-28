@@ -81,7 +81,7 @@ Workshop to create tags for uploads.
 
     Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file.
 
-1. Navigate to your GarrysMod bin directory. (Usually in `Steam\steamapps\common\GarrysMod\bin`).
+1. Navigate to your GarrysMod bin directory. (Usually in `Steam/steamapps/common/GarrysMod/bin`).
 
 1. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your original folder came from.
 

@@ -8,12 +8,12 @@ For this guide I'll be using the Visual Studio Code with the glualint extension 
 Firstly you need to make sure that you're using the correct folder structure.
 Your addon folder must be in this format:
 
-* `weapon_ttt_<weapon name>\gamemodes\terrortown\entities\weapons\weapon_ttt_\<weapon name>.lua`
+* `weapon_ttt_<weapon name>/gamemodes/terrortown/entities/weapons/weapon_ttt_/<weapon name>.lua`
 
 Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be stored in this format:
 
-* `\weapon_ttt_<weapon name>\materials\vgui\ttt\<weapon name>_icon.vtf`
-* `\weapon_ttt_<weapon name>\materials\vgui\ttt\<weapon name>_icon.vmt`
+* `/weapon_ttt_<weapon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
+* `/weapon_ttt_<weapon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
 
 See the [Creating An Addon](../../basics/creating-an-addon/#project-structure) page for more info on folder structure.
 
@@ -50,9 +50,10 @@ if CLIENT then
    -- The information shown in the buy menu
    SWEP.EquipMenuData      =
    {
-      type = "Weapon",
-      desc = "This is a template weapon"
-   };
+      type = "item_weapon",
+      name = "weapon_template_name",
+      desc = "weapon_tempalte_desc"
+   }
 end
 ```
 
@@ -79,7 +80,8 @@ SWEP.Primary.NumShots      = 1 -- Number of shots fired at one time (make into s
 SWEP.Primary.Recoil        = 1.5 -- Recoil value (bigger = bigger)
 ```
 
-Note all of these attributes can also be applied to SWEP.Secondary which is alt click if you disable ironsights.
+!!! note
+    All of these attributes can also be applied to SWEP.Secondary which is alt click if you disable ironsights.
 
 ```lua
 SWEP.HoldType              = "ar2"
