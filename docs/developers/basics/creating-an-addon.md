@@ -49,9 +49,10 @@ In order to upload your addon to the Steam Workshop, you need to first compile i
 1. Your addon file must contain an "addon.json". This consists of a key:value pair table with information used by the Steam Workshop to create tags for uploads.
 It should have a structure like this:
 
-![addon_json.png](../../assets/images/article/addon.json.png)
+![addon_json.png](../../assets/images/article/addon_json.png)
 
 Type is the category which this addon fits into best. One of:
+
 "ServerContent",
 "gamemode",
 "map",
@@ -62,6 +63,7 @@ Type is the category which this addon fits into best. One of:
 "effects",
 "model"
 Tags are what describes your addon best. Choose two of:
+
 "fun",
 "roleplay",
 "scenic",
