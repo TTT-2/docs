@@ -1,7 +1,7 @@
 # Creating a Weapon
 
 When starting content creation for gmod, creating a basic weapon using the SWEP structure is one of the easiest things you can do.
-For this guide I'll be using the Visual Studio Code with the glualint extension as referenced in the "Creating an addon" section of these documents.
+For this guide I'll be using the Visual Studio Code with the glualint extension as referenced in the [Creating An Addon](../basics/creating-an-addon.md) section of these documents. Using those instructions for setting up the editor and project structure/management will make it easier for us to support you with any problems while coding.
 
 ## File Format
 
@@ -81,7 +81,7 @@ SWEP.Primary.Recoil        = 1.5 -- Recoil value (bigger = bigger)
 ```
 
 !!! note
-    All of these attributes can also be applied to SWEP.Secondary which is alt click if you disable ironsights.
+    All of these attributes can also be applied to SWEP.Secondary which is alt click (if you disable ironsights).
 
 ```lua
 SWEP.HoldType              = "ar2"
