@@ -46,6 +46,7 @@ nav:
         - 'developers/content-creation/creating-a-hudelement.md'
         - 'developers/content-creation/creating-a-hud-theme.md'
         - 'developers/content-creation/sidebar-population.md'
+        - 'developers/content-creation/language-support.md'
 
 # Customization
 extra:
