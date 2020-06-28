@@ -2,7 +2,7 @@
 
 TargetID is the system that displays information while looking at entities. This system got completely overhauled for TTT2 and is now easily extendable by addons.
 
-???+ abstract "Example of the Default Padding Used for Role Icons"
+???+ abstract "TargetID Usage Examples"
     ![Icon Padding](../../assets/images/article/targetid.png)
 
 ## Adding Information
@@ -10,7 +10,7 @@ TargetID is the system that displays information while looking at entities. This
 Adding or modifying information to the targetID element is done with a hook that is called every frame as long as the player is looking at a valid entity. This hook is called after internal information are added to the targetID element so that a external modification is possible.
 
 ```lua
-hook.Add("TTTRenderEntityInfo", "your_hook_identifier", function(tData)
+hook.Add("TTTRenderEntityInfo", "hook_identifier", function(tData)
     -- do something
 end)
 ```
@@ -24,7 +24,7 @@ Check out the [[reference]](https://github.com/TTT-2/TTT2/blob/master/gamemodes/
 In some cases the targeted entity has to be modified. While this can be done in the rendering hook as well, a secondary hook is recommended. This hook is run before the rendering hook and therefore allows the modification of the entity reference before other addons add their rendering code.
 
 ```lua
-hook.Add("TTTModifyTargetedEntity", "your_hook_identifier", function(ent, distance)
+hook.Add("TTTModifyTargetedEntity", "hook_identifier", function(ent, distance)
     -- do something and return the reference to the new ent
 end)
 ```
