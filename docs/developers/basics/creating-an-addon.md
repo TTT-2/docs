@@ -53,26 +53,28 @@ It should have a structure like this:
 
 Type is the category which this addon fits into best. One of:
 
-"ServerContent",
-"gamemode",
-"map",
-"weapon",
-"vehicle",
-"npc",
-"tool",
-"effects",
-"model"
+- "ServerContent",
+- "gamemode",
+- "map",
+- "weapon",
+- "vehicle",
+- "npc",
+- "tool",
+- "effects",
+- "model"
+
 Tags are what describes your addon best. Choose two of:
 
-"fun",
-"roleplay",
-"scenic",
-"movie",
-"realism",
-"cartoon",
-"water",
-"comic",
-"build"
+- "fun",
+- "roleplay",
+- "scenic",
+- "movie",
+- "realism",
+- "cartoon",
+- "water",
+- "comic",
+- "build"
+
 Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file
 1. Navigate to your GarrysMod bin directory. (Usually in "Steam\steamapps\common\GarrysMod\bin").
 1. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your folder came from.
