@@ -61,12 +61,14 @@ The most direct way to use the now defined language strings is by using one of t
 Since translations are done client side, custom networking has to be added if a message should be issued from the server. However there is a workaround suitable for most cases: `LANG.Msg()`. This function automatically networks the message to the client and translates it there to the correct language. This system is based on param translations.
 
 `LANG.Msg(receipient, identifier, params, type)`:
+
 - `receipient`: Either a player or a table of players that should receive this message
 - `identifier`: The string language identifier
 - `params`: A table of parameters that are used in the param translation
 - `type`: The type of the message
 
 The type of the message can have different types depending on where and in which color the message should be shown. The following types are available:
+
 - `MSG_MSTACK_ROLE`: MStack message with the role color as background color
 - `MSG_MSTACK_WARN`: MStack message with a red background color
 - `MSG_MSTACK_PLAIN`: MStack message with the HUD color as background color
