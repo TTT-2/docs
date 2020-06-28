@@ -13,6 +13,10 @@ If you want it to be compatible with sandbox, put a copy of your lua file in:
  
 See the [Creating An Addon](https://docs.ttt2.neoxult.de/developers/basics/creating-an-addon/) page for more info on folder structure
  
+## Important SWEP Values
+
+
+
 ## Template
 Here is a [template weapon](../../assets/luafiles/weapon_ttt_template.lua) for reference.
-If you want to do more than change default values to create different conventional firearms, view the [weapon_tttbase](https://github.com/TTT-2/TTT2/blob/master/gamemodes/terrortown/entities/weapons/weapon_tttbase.lua) file which ttt2 uses to base its SWEPs on.
+If you want to do more than change default values to create different conventional SWEPs, view the [weapon_tttbase](https://github.com/TTT-2/TTT2/blob/master/gamemodes/terrortown/entities/weapons/weapon_tttbase.lua) file which ttt2 uses to base its SWEPs on.
