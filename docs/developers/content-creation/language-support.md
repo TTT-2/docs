@@ -33,7 +33,7 @@ Use your Ankh to your benefit. Place it in a strategic position and make sure it
 -- ...
 
 ```
-???+ note "ON Language Identifiers"
+???+ note "A Note on Language Identifiers"
     Language identifers have to be unique. If they are used multiple times in different addons, they will overwrite each other and only one of them will be used. The same holds true for the language file names. Make sure that the filename is descriptive and not used by any other addon.
 
 You can check out an example [here](https://github.com/TTT-2/ttt2-role_pha/tree/master/lua/lang).
