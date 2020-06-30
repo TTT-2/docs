@@ -40,7 +40,7 @@ Custom sounds for your SWEP will need to be stored in this folder if you're not 
 * `<addon name>/gamemodes/terrortown/content/sound/`
 
 !!! note
-   Sounds types accepted are: .wav, .mp3 and .ogg.
+   Sounds types accepted are: `*.wav`, `*.mp3` and `*.ogg`.
 
 GMod default sound paths are found [here](https://wiki.facepunch.com/gmod/Common_Sounds).
 
