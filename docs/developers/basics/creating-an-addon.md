@@ -45,6 +45,61 @@ See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a de
 
 ## Publishing your Addon
 
+## Windows
+
+In order to upload your addon to the Steam Workshop, you need to first compile it into a .gma file.
+
+1. Your addon file must contain an "addon.json" within the `<addon name>/` directory of your folder. This consists of a key:value pair table with information used by the Steam
+Workshop to create tags for uploads.
+    It should have a structure like this:
+
+    ???+ abstract "Example addon.json file"
+        ![addon_json.png](../../assets/images/article/addon_json.png)
+
+    Type is the category which this addon fits into best. One of:
+
+    - "ServerContent",
+    - "gamemode",
+    - "map",
+    - "weapon",
+    - "vehicle",
+    - "npc",
+    - "tool",
+    - "effects",
+    - "model".
+
+    Tags are what describes your addon best. Choose two of:
+
+    - "fun",
+    - "roleplay",
+    - "scenic",
+    - "movie",
+    - "realism",
+    - "cartoon",
+    - "water",
+    - "comic",
+    - "build".
+
+    Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file.
+
+1. Navigate to your GarrysMod bin directory. (Usually in `Steam/steamapps/common/GarrysMod/bin`).
+
+1. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your original folder came from.
+
+    Alternatively you can use the cmd which gives you better error messages. Navigate to the GMod bin folder on the cmd and type gmad.exe, this gives you the gmad usage info. Input the directory to your addon folder and specify the output file directory and name.
+    
+    ???+ abstract "gmad help output"
+        ![gmad_info.png](../../assets/images/article/gmad_info.png)
+
+1. Navigate to the bin folder via cmd to use gmpublish.exe.
+
+1. Type `gmpublish.exe` to view usage information, input your icon and `*.gma` paths in their respective fields.
+
+    ???+ abstract "gmpublish help output"
+        ![gmpublish_info.png](../../assets/images/article/gmpublish_info.png)
+
+1. You have now published your addon onto the steam workshop. Visit the addon in the workshop via the link that gmpublish gives you to add information to it and make it public.
+
 ## Helpful Resources
 
 * [The Garry's Mod wiki](https://wiki.facepunch.com/)
