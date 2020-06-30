@@ -8,14 +8,23 @@ For this guide I'll be using the Visual Studio Code with the glualint extension 
 Firstly you need to make sure that you're using the correct folder structure.
 Your addon folder must be in this format:
 
-* `weapon_ttt_<weapon name>/gamemodes/terrortown/entities/weapons/weapon_ttt_/<weapon name>.lua`
+* `<addon name>/gamemodes/terrortown/entities/weapons/weapon_ttt_/<weapon name>.lua`
 
 Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be stored in this format:
 
-* `/weapon_ttt_<weapon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
-* `/weapon_ttt_<weapon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
+* `<addon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
+* `<addon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
 
-See the [Creating An Addon](../../basics/creating-an-addon/#project-structure) page for more info on folder structure.
+Also, it would be greatly appreciated if you included support for multiple languages into your addon so that it becomes more accessible for users. Extra accessiblilty will also help with getting your addon noticed and downloaded if you're planning on uploading it to the Workshop.
+Your language files will need to be stored in this format:
+
+* `<addon name>/lua/lang/<language identifier>/<lang file name>.lua`
+
+The language identifier should be unique to prevent clashes with other addons' translations.
+
+See the [Language Support](language-support.md) page for more information on this topic.
+
+See the [Creating An Addon](../basics/creating-an-addon.md/#project-structure) page for more info on folder structure.
 
 ## General setup
 
