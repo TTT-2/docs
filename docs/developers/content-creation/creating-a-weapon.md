@@ -161,7 +161,7 @@ SWEP.Kind                 = WEAPON_EQUIP1 -- Kind specifies what weapon_ttt cate
 SWEP.CanBuy                = {ROLE_TRAITOR} -- Which roles can purchase this swep (table)
 ```
 
-This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_<ROLE NAME>.
+This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_<ROLE NAME\>.
 
 ## Template
 
