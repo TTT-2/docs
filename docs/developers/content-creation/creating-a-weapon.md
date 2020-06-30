@@ -15,7 +15,7 @@ Your weapon's lua file must be in this format:
 
 ### Icon Files
 
-Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be stored in this format:
+Your `*.vmt` and `*.vtf` icon files (what gets shown in the buy menu) will need to be stored in this format:
 
 * `<addon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
 * `<addon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
