@@ -5,22 +5,55 @@ For this guide I'll be using the Visual Studio Code with the glualint extension 
 
 ## File Format
 
-Firstly you need to make sure that you're using the correct folder structure.
-Your addon folder must be in this format:
+The most important thing you must get right about weapons (or addons in general) is the folder structure. If your structure is all wrong, them gmod won't recognise the files and your addon will break.
+
+### Weapon Lua Script
+
+Your weapon's lua file must be in this format:
 
 * `<addon name>/gamemodes/terrortown/entities/weapons/weapon_ttt_/<weapon name>.lua`
+
+### Icon Files
 
 Your .vmt and .vtf icon files (what gets shown in the buy menu) will need to be stored in this format:
 
 * `<addon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
 * `<addon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
 
-Also, it would be greatly appreciated if you included support for multiple languages into your addon so that it becomes more accessible for users. Extra accessiblilty will also help with getting your addon noticed and downloaded if you're planning on uploading it to the Workshop.
-Your language files will need to be stored in this format:
+Documentation on how to create icons will be uploaded soon.
 
-* `<addon name>/lua/lang/<language identifier>/<lang file name>.lua`
+### Model Files
 
-The language identifier should be unique to prevent clashes with other addons' translations.
+Model files for the SWEP will also need to be stored in the addon folder, unless you're using the default ones which come with source games. It's advised that even if you're using non-GMod models that you include them in the addon because not all users will own CS:S or Half life, etc.
+
+* `<addon name>/materials/models/<model folder>/<model name>.vmt`
+* `<addon name>/models/<model files>`
+
+Documentation on how to create models will be uploaded soon.
+
+GMod default weapon model paths are found [here](https://wiki.facepunch.com/gmod/Common_Weapon_Models).
+
+### Sound Files
+
+Custom sounds for your SWEP will need to be stored in this folder if you're not going to use the default sounds from GMod. This has the benefit that they're only loaded when you're using the ttt/2 gamemode.
+
+* `<addon name>/gamemodes/terrortown/content/sound/`
+
+!!! note
+   Sounds types accepted are: .wav, .mp3 and .ogg.
+
+GMod default sound paths are found [here](https://wiki.facepunch.com/gmod/Common_Sounds).
+
+### Language files
+
+It would be greatly appreciated if you included support for multiple languages into your addon so that it becomes more accessible for users. Extra accessiblilty will also help with getting your addon noticed and downloaded if you're planning on uploading it to the Workshop. When you want a string (e.g. the description in the buy menu) to be translated, you place in a language identifier instead. A language identifier is placed in each file as a variable name and the value of which is the translation.
+
+Each language file will need to be stored in this format:
+
+* `<addon name>/lua/lang/<language folder>/<lang file name>.lua`
+
+!!! note
+   The language identifier should be unique to prevent clashes with other addons' translations.
 
 See the [Language Support](language-support.md) page for more information on this topic.
 
@@ -66,6 +99,8 @@ if CLIENT then
 end
 ```
 
+The name and description values (language identifiers) are used in this format so as to allow for multi language support, see the [Language Files](#language-files) section for more info.
+
 ## Important SWEP values
 
 ```lua
@@ -94,7 +129,7 @@ SWEP.Primary.Recoil        = 1.5 -- Recoil value (bigger = bigger)
 
 ```lua
 SWEP.HoldType              = "ar2"
-SWEP.ViewModel             = "models/weapons/c_irifle.mdl" -- What the swep looks like to the user
+SWEP.ViewModel             = "models/weapons/c_irifle.mdl" -- What the swep looks like to the user (Custom models can be used too)
 SWEP.WorldModel            = "models/weapons/w_irifle.mdl" -- What the swep looks like to everyone else
 SWEP.UseHands              = true -- Whether the swep will force the user to see the viewmodel's hands
 SWEP.AutoSpawnable         = false -- Whether the swep will spawn upon map gen (override as false if EQUIP1/2)
