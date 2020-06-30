@@ -93,7 +93,7 @@ Workshop to create tags for uploads.
 
 1. Navigate to the bin folder via cmd to use gmpublish.exe.
 
-1. Type gmpublish.exe to view usage information, input your icon and .gma paths in their respective fields.
+1. Type `gmpublish.exe` to view usage information, input your icon and `*.gma` paths in their respective fields.
 
     ???+ abstract "gmpublish help output"
         ![gmpublish_info.png](../../assets/images/article/gmpublish_info.png)
