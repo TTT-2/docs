@@ -175,13 +175,13 @@ In TTT2 the `SWEP.Slot` is automatically calculated from the `SWEP.Kind`. Theref
 SWEP.Kind                 = WEAPON_EQUIP1
 ```
 
-| `SWEP.Kind` | `WEAPON_MELEE` | `WEAPON_PISTOL` | `WEAPON_HEAVY` | `WEAPON_NADE` | `WEAPON_CARRY` |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| `SWEP.Slot` | 1 | 2 | 3 | 4 | 5 |
+`SWEP.Kind` | `WEAPON_MELEE` | `WEAPON_PISTOL` | `WEAPON_HEAVY` | `WEAPON_NADE` | `WEAPON_CARRY`
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+`SWEP.Slot` | 1 | 2 | 3 | 4 | 5
 
-| `SWEP.Kind` | `WEAPON_UNARMED` | `WEAPON_SPECIAL` | `WEAPON_EXTRA` | `WEAPON_CLASS` |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| `SWEP.Slot` | 6 | 7 | 8 | 9 |
+`SWEP.Kind` | `WEAPON_UNARMED` | `WEAPON_SPECIAL` | `WEAPON_EXTRA` | `WEAPON_CLASS`
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+`SWEP.Slot` | 6 | 7 | 8 | 9
 
 ```lua
 -- Which roles can purchase this swep (table)
