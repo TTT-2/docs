@@ -15,8 +15,9 @@
     |**Pharaoh**|Can place an Ankh! If he owns it when he dies he will respawn!|
     |**Priest**|You can mark people with your Holy Deagle to confirm them as Innocents!|
     |**Shinigami**|You will be brought back to life after dying and know who the traitors are!|
+    |**Spectre**|You will haunt your killer and come back to life if your killer dies!|
     |**Spy**|You infiltrated the Traitors and look like one to them!|
-    |**Survivalist**|You have the benefit of having a shop! |
+    |**Survivalist**|You have the benefit of having a shop!|
     |**Trapper**|You may use Traitor buttons!|
     |**Wrath**|If another Innocent kills you, you will be brought back as a Traitor!|
 
@@ -37,9 +38,12 @@
 
     | _Traitor Roles_ | _Description_ |
     | - | - |
+    |**Gluton**|Has to satisfy his hunger by eating players and bodies!
     |**Graverobber**|A Traitor will become this if the Ankh is placed, steal the Pharaohs Ankh!|
     |**Hitman**|Has to kill specific targets in order to get a lot of credits!|
+    |**Mesmerist**|Can revive a player, turning them into a Thrall!
     |**Supervillain**|Destroy crystals to earn credits!|
+    |**Thrall**|A player who has been converted into a traitor by the Mesmerist!
     |**Totemhunter**|Destroy totems to earn credits!|
     |**Traitor**|The 'bad' guys, just like you know them!|
     |**Vampire**|May transform into a bat and heal himself after killing a player!|
@@ -54,6 +58,7 @@
     |**Infected**|Has to kill everyone! Everyone he kills will become his zombie!|
     |**Jackal**|Has to kill everyone! Can make himself a Sidekick!|
     |**Necromancer**|Has to kill everyone! Can revive players as his zombies!|
+    |**Ravenous**|Has to kill everyone! The Gluton becomes this if he gets too hungry!|
     |**Serialkiller**|Has to kill everyone! Also has a wallhack!|
 
 === "Neutral Roles"
