@@ -24,10 +24,11 @@ theme:
 
 # Navigation
 nav:
-  - General: 
+  - General:
     - TTT2: 'index.md'
-    - Troubleshooting: 'troubleshooting/index.md'
-    - Role Overview: 'features/roles.md'
+    - Troubleshooting: 'general/troubleshooting.md'
+    - Role Overview: 'general/roles.md'
+    - Migrating: 'general/migrating.md'
   - Server Owners:
       - Using TTT2: 'server-owners/index.md'
       - Serverinstall Guides:

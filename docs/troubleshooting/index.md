@@ -14,6 +14,8 @@ The integrated addon checker will check for known incompatible addons using a cu
 ???+ abstract "Example Output Found in the Server Log"
     ![Addonchecker example output](../assets/images/troubleshooting/addonchecker.png)
 
+You can also type `addonchecker` in the server console to get an ouput at any time.
+
 ## FAQ
 
 ### Q1: The HUD throws errors / is invisible.
