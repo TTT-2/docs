@@ -26,7 +26,7 @@ theme:
 nav:
   - General:
     - TTT2: 'index.md'
-    - Troubleshooting: 'general/troubleshooting.md'
+    - Troubleshooting: 'troubleshooting/index.md'
     - Role Overview: 'general/roles.md'
     - Migrating: 'general/migrating.md'
   - Server Owners:
