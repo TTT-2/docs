@@ -134,7 +134,7 @@ All commands from now on will be run by that user, there are two ways you can sw
 
 - Don't use Capital Letters in any directory or filename
 - If you intend to host this server at home, keep in mind you would need to open some ports to the internet. Setting that up and securing this is out of the scope of this guide (at least for now)
-- TTT2 is intended to be used as a 'normal' Addon **do not** overwrite any garrysmod files with it
+- TTT2 is intended to be used as a 'normal' Addon **do not** overwrite any garrysmod files with it. You **can not** remove the base `terrortown` gamemode as TTT2 needs that.
 - Instead of using FastDL use a [workshop-downloader addon](https://steamcommunity.com/sharedfiles/filedetails/?id=626604673). With FastDL you invest a lot of time just to get weird issues. It is just not worth it
 - safely shutdown your server with `quit` in the serverconsole. ULX won't save your conVars otherwise.
 

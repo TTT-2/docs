@@ -7,6 +7,7 @@
     - [TTT Damagelogs](https://github.com/Tommy228/tttdamagelogs) - Please install Alf's patched version, which can be found [here](https://github.com/Alf21/tttdamagelogs). Otherwise this may cause issues like rounds not starting or special roles not being selected.
     - [Pointshop 1 / 2 TTT Role Control](https://www.gmodstore.com/market/view/ttt-role-control-traitorpass-and-detectivepass-pointshop-1-2) - This interferes with the role selection system of TTT2 and is currently unusable.
     - [TTT Spectator Deathmatch](https://github.com/Tommy228/TTT_Spectator_Deathmatch) - You can use the fixed version for TTT2 made by Nick & mexikoedi found [here](https://steamcommunity.com/sharedfiles/filedetails/?id=1997666028) instead.
+4. Do **not** remove the base `terrortown` gamemode, doing this will cause various issues as TTT2 depends on its assets to work correctly.
 
 ## Addon checker
 The integrated addon checker will check for known incompatible addons using a curated list and will inform you about many known incompatible addons and possible replacements. The output is printed to the server log / the console, when the gamemode loads. These addons may still work, but are **not recommended** and should be removed when troubleshooting a problem.
