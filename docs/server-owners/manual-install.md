@@ -1,6 +1,6 @@
 # Setting up a dedicated Linux Server (for TTT2)
 
-This is a Guide for the most 'manual' install you can do. If you want a more automated setup, parts of this guide may still apply but you could give something like [LinuxGSM](https://linuxgsm.com/lgsm/gmodserver/) a look.
+This is a guide for the most 'manual' install you can do. If you want a more automated setup, parts of this guide may still apply but you could give something like [LinuxGSM](https://linuxgsm.com/lgsm/gmodserver/) a look.
 
 ??? quote "Reference Guides from Gmod Wiki and Valve Wiki"
     - [Downloading SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD)
@@ -82,7 +82,7 @@ We don't want our Garrysmod server to run as root or as our sudo user, so we wil
 sudo useradd -m steam
 ```
 
-All commands from now on will be run by that user, there are two ways you can switch to that user:
+All commands from now on will be run by that user! There are two ways you can switch to that user:
 
 === "Variant 1"
 
@@ -134,9 +134,9 @@ All commands from now on will be run by that user, there are two ways you can sw
 
 - Don't use Capital Letters in any directory or filename
 - If you intend to host this server at home, keep in mind you would need to open some ports to the internet. Setting that up and securing this is out of the scope of this guide (at least for now)
-- TTT2 is intended to be used as a 'normal' Addon **do not** overwrite any garrysmod files with it. You **can not** remove the base `terrortown` gamemode as TTT2 needs that.
+- TTT2 is intended to be used as a 'normal' Addon **do not** overwrite any Garrysmod files with it. You **can not** remove the base `terrortown` gamemode as TTT2 needs that.
 - Instead of using FastDL use a [workshop-downloader addon](https://steamcommunity.com/sharedfiles/filedetails/?id=626604673). With FastDL you invest a lot of time just to get weird issues. It is just not worth it
-- safely shutdown your server with `quit` in the serverconsole. ULX won't save your conVars otherwise.
+- Safely shutdown your server with `quit` in the serverconsole. ULX won't save your conVars otherwise.
 
 ## SteamCMD
 
@@ -259,10 +259,11 @@ These two files are primarily used to configurate your server as they are execut
     `autoexec.cfg` is executed everytime the server starts.  
     `server.cfg` is executed everytime a mapchange occurs.
 
-    !!! tip
-        If you don't know where to put which configuration or if you only want to manage one `.cfg` file just use the `server.cfg`.
+    If you don't know where to put which configuration or if you only want to manage a singular configfile just use the `server.cfg`.
 
-!!! example "A minimal .cfg file could look like this:"
+A minimal `server.cfg` could look like this:
+
+!!! example "Minimal `server.cfg` example"
     ```cfg
     hostname "My Garrysmod Server"
     sv_password ""
@@ -321,7 +322,7 @@ Next you need to get the ID of that collection and add it to your server start c
 I highly suggest using ULX as it makes many things easier. You will need [ULX](https://steamcommunity.com/sharedfiles/filedetails/?id=557962238), [ULib](https://steamcommunity.com/sharedfiles/filedetails/?id=557962280) and [ULX Commands for TTT2](https://steamcommunity.com/sharedfiles/filedetails/?id=1362430347).
 
 !!! tip
-    These 3 addons are already inside the collection I'm using in the example. If you are making your own collection don't forget to add those 3!
+    These 3 addons are already inside the collection I'm using in the example. If you are creating your own collection don't forget to add those 3!
 
 Set yourself as superadmin so you can change the server settings. Just be connected to the server and type the following into the serverconsole. Replace "your username" with your steamname!
 
@@ -344,8 +345,8 @@ Also keep in mind each game server account is only useable by one server instanc
 
 You will need to enter two things:
 
-- The App ID of the base game this is `4000` for Garry's Mod (DO NOT use `4020` here)
-- a memo to remember what server the game account is for
+- The App ID of the base game. This is `4000` for Garry's Mod (**do not** use `4020` here)
+- A memo to remember what server the game account is for
 
 Now to use the account with your server simply add `+sv_setsteamaccount` followed by the generated token to your startcommand, like so:
 
@@ -420,36 +421,36 @@ ln -s ~/steam/linux32/steamclient.so ~/.steam/sdk32/steamclient.so
 
 ### Add Addons from outside the Workshop
 
-All directories (and their contained files) in the `/home/steam/gmod_ds/garrysmod/addons/` directory will be mounted as 'filesystem addons'.
-This however is not recommended as this could cause some issues. Only do this if you have a good reason for it (e.g. Addon not on the Workshop, modificated Addon).
+All directories (and their contained files) in `/home/steam/gmod_ds/garrysmod/addons/` will be mounted as 'filesystem addons'.
+This however is not recommended as this could cause some issues. Only do this if you have a good reason for it (e.g. Addon not on the Workshop, modified Addon).
 The biggest problem with this is the clients who join the Server need to get these files somehow.
 
 This means either:
 
 - the clients have to download the files directly from the server
-  - which you would need to allow in the `server.cfg` with `sv_allowdownload 1`
-  - which takes up serverressources (CPU-time and bandwidth mostly)  
+    - which you would need to allow in the `server.cfg` with `sv_allowdownload 1`
+    - which takes up serverressources (CPU-time and bandwidth mostly)  
 - you would need to setup 'FastDL'
-  - not recommended as it is a hassle to setup and brings another level of potential issues
+    - not recommended as it is a hassle to setup and brings another level of potential issues
 
 ### Use the Garrysmod 64-Bit Version
 
 !!! warning
     If you follow these steps you will switch to an experimental build of the gameserver. Bugs are to be expected.
 
-We will do the exact same thing as in the [Install Gmod](#install-gmod-and-css) section, but instead of
+We will do the exact same thing as in the [Install Gmod](#install-gmod-and-css) section, but instead of:
 
 ```steamcmd
 app_update 4020 validate
 ```
 
-we will do
+we will do:
 
 ```steamcmd
 app_update 4020 -beta x86-64 validate
 ```
 
-this will download the **experimental** branch of Gmod which features a 64-Bit Version of the server executable which will be in `/home/steam/gmod_ds/garrysmod/` and is called `srcds_run_x64`.
+this will download an **experimental** branch of Gmod which features a 64-Bit Version of the server executable. It will be installed in `/home/steam/gmod_ds/garrysmod/` and is called `srcds_run_x64`.
 
 !!! note
     The 32-Bit version `srcds_run` is also still available, but as this is an experimental **beta** it might be different to the non beta branch executable. Just keep this in mind if you encounter issues.
