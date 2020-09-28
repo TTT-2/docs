@@ -330,7 +330,7 @@ Set yourself as superadmin so you can change the server settings. Just be connec
     The `""` are only needed if your steamname contains whitespaces.
 
 ```console
-adduser "your username" superadmin
+ulx adduser "your username" superadmin
 ```
 
 ## Further Configuration
