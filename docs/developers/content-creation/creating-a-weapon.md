@@ -49,7 +49,7 @@ It would be greatly appreciated if you included support for multiple languages i
 
 Each language file will need to be stored in this format:
 
-`<addon name>/lua/lang/<language folder>/<lang file name>.lua`
+`<addon name>/lua/terrortown/lang/<language folder>/<lang file name>.lua`
 
 ???+ note
     The language identifier should be unique to prevent clashes with other addons' translations.
@@ -79,11 +79,11 @@ It's very important to create a globally unique name for this because the Gmod c
 ```lua
 if CLIENT then
     -- How much of the first person viewmodel is seen
-    SWEP.ViewModelFOV       = 70
+    SWEP.ViewModelFOV = 70
     -- If true, the viewmodel is on the left
-    SWEP.ViewModelFlip      = true
+    SWEP.ViewModelFlip = true
     -- Does the client draw its own crosshair over the default ones
-    SWEP.DrawCrossHair      = false
+    SWEP.DrawCrossHair = false
 
     -- The filename of the icon shown in the buymenu
     SWEP.Icon = "vgui/ttt/blue_template_icon.vtf"
@@ -103,76 +103,76 @@ The name and description values (language identifiers) are used in this format s
 
 ```lua
 -- What weapon this is based upon (always use weapon_tttbase when creating a ttt/2 weapon)
-SWEP.Base                  = "weapon_tttbase"
+SWEP.Base = "weapon_tttbase"
 ```
 
 The TTT2 gamemode has a file which describes the default values and methods. Any SWEP which specifies weapon_tttbase inherits the attributes and methods unless specified.
 
 ```lua
 -- Higher is slower
-SWEP.Primary.Delay         = 0.001
+SWEP.Primary.Delay = 0.001
 -- Is it automatic
-SWEP.Primary.Automatic     = true
+SWEP.Primary.Automatic = true
 -- How much damage per shot
-SWEP.Primary.Damage        = 1
+SWEP.Primary.Damage = 1
 -- Cone of accuracy
-SWEP.Primary.Cone          = 0.5
+SWEP.Primary.Cone = 0.5
 -- Which ttt ammo entity is picked up by this swep, 'none' for no ammo type
-SWEP.Primary.Ammo          = "smg1"
+SWEP.Primary.Ammo = "smg1"
 -- Maximum clip size
-SWEP.Primary.ClipSize      = 100
+SWEP.Primary.ClipSize = 100
 -- Starting clip size
-SWEP.Primary.DefaultClip   = 100
+SWEP.Primary.DefaultClip = 100
 -- Either a sound file from the default list or a custom one
-SWEP.Primary.Sound         = Sound("Weapon_AK47.Single")
+SWEP.Primary.Sound = Sound("Weapon_AK47.Single")
 -- Number of shots fired at one time (make into shotgun if increase conde val)
-SWEP.Primary.NumShots      = 1
+SWEP.Primary.NumShots = 1
 -- Recoil value (bigger = bigger)
-SWEP.Primary.Recoil        = 1.5
+SWEP.Primary.Recoil = 1.5
 ```
 
 ???+ note
     All of these attributes can also be applied to SWEP.Secondary which is right click by default.
 
 ```lua
-SWEP.HoldType              = "ar2"
+SWEP.HoldType = "ar2"
 -- What the swep looks like to the user (Custom models can be used too)
-SWEP.ViewModel             = "models/weapons/c_irifle.mdl"
+SWEP.ViewModel = "models/weapons/c_irifle.mdl"
 -- What the swep looks like to everyone else
-SWEP.WorldModel            = "models/weapons/w_irifle.mdl"
+SWEP.WorldModel = "models/weapons/w_irifle.mdl"
 -- Whether the swep will force the user to see the viewmodel's hands
-SWEP.UseHands              = true
+SWEP.UseHands = true
 -- Whether the swep will spawn upon map gen (override as false if EQUIP1/2)
-SWEP.AutoSpawnable         = false
+SWEP.AutoSpawnable = false
 -- Which entity you pick up to fill your clips
-SWEP.AmmoEnt               = "item_ammo_smg1_ttt"
+SWEP.AmmoEnt = "item_ammo_smg1_ttt"
 -- Which roles gain this weapon upon round start (table data structure)
-SWEP.InLoadoutFor          = nil
+SWEP.InLoadoutFor = nil
 -- If true only one can be bought per round
-SWEP.LimitedStock          = true
+SWEP.LimitedStock = true
 -- Is the player able to drop the swep
-SWEP.AllowDrop             = true
+SWEP.AllowDrop = true
 -- If true, the killed player will not scream upon death
-SWEP.IsSilent              = false
+SWEP.IsSilent = false
 -- If true, the swep has no ironsights capability (no Secondary fire if ironsights?)
-SWEP.NoSights              = false
+SWEP.NoSights = false
 -- Multiply the headshot damage by this much
-SWEP.HeadshotMultiplier    = 50
+SWEP.HeadshotMultiplier = 50
 -- The lower the slower
-SWEP.DeploySpeed           = 0.2
+SWEP.DeploySpeed = 0.2
 -- Moves the Viewmodel by this vector when using ironsights
-SWEP.IronSightsPos         = Vector(-2, -5, 0)
+SWEP.IronSightsPos = Vector(-2, -5, 0)
 -- Rotates the Viewmodel by this angle when using ironsights
-SWEP.IronSightsAng         = Vector(-2, 0, 0)
+SWEP.IronSightsAng = Vector(-2, 0, 0)
 ```
 
 These are most of the other miscellaneous values which can also be applied to the SWEP. Note that if any of these values are not explicitly stated in your lua file they will inherit the `weapon_tttbase ones`.
 
-In TTT2 the `SWEP.Slot` is automatically calculated from the `SWEP.Kind`. Therefore only the latter has to be set.
+In TTT2 the `SWEP.Slot` is automatically generated from the `SWEP.Kind`. Therefore only the latter has to be set.
 
 ```lua
 -- Kind specifies what weapon_ttt category it falls into
-SWEP.Kind                 = WEAPON_EQUIP1
+SWEP.Kind = WEAPON_EQUIP1
 ```
 
 | `SWEP.Kind` | `WEAPON_MELEE` | `WEAPON_PISTOL` | `WEAPON_HEAVY` | `WEAPON_NADE` | `WEAPON_CARRY` |
@@ -185,7 +185,7 @@ SWEP.Kind                 = WEAPON_EQUIP1
 
 ```lua
 -- Which roles can purchase this swep (table)
-SWEP.CanBuy                = {ROLE_TRAITOR}
+SWEP.CanBuy = {ROLE_TRAITOR}
 ```
 
 This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_<ROLE NAME\>. However the serveradmin can change those values at a later point in the shopeditor found ingame.
