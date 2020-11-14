@@ -13,10 +13,10 @@ In order to create a new HUD, you have to create a specific folder structure in 
 ```txt
 <YOUR_ADDON>/
 ├── lua/
-│   ├── autorun/
-│   │   ├── your other lua files ...
-│   │   └── ttt2_<YOUR_HUD_NAME>_force_download.lua
 │   └── terrortown/
+│       ├── autorun/
+│       │   ├── your other lua files ...
+│       │   └── ttt2_<YOUR_HUD_NAME>_force_download.lua
 │       └── gamemode/
 │           └── shared/
 │               ├── hud_elements/
