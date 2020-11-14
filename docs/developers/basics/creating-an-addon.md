@@ -35,13 +35,13 @@ Besides the general Garry's Mod files, TTT2 also automatically loads different t
 
 #### General Purpose Lua Files
 
-While Garry's Mod provides it's own autorun folder, this folder has the drawback that it is loaded independant from the selected gamemode. To prevent TTT2 addons from throwing errors in other gamemodes, TTT2 now has its own fileloader.
+While Garry's Mod provides its own autorun folder, this folder has the drawback that it is loaded independant from the selected gamemode. To prevent TTT2 addons from throwing errors in other gamemodes, TTT2 now has its own fileloader.
 
 Files have to be placed in `lua/terrortown/autorun` to be loaded. However those files can't be placed directly inside this folder, but have to be placed in one of those three subfolders: `server/`, `client/`, `shared/`. Those files will be automatically included in their respective realm, therefore `AddCSLuaFile()` is not needed.
 
 #### Language
 
-Language files are a means to make translations for users easier by putting translations into their own folder and therefore keeping things cleans. Translations have to be placed in `lua/terrortown/lang/`. A more in depth documenation can be found in the [/developers/content-creation/language-support/](language support) section.
+Language files are a means to make translations for users easier by putting translations into their own folder and therefore keeping things cleans. Translations have to be placed in `lua/terrortown/lang/`. A more in depth documenation can be found in the [language support](/developers/content-creation/language-support/) section.
 
 #### Items
 
@@ -59,7 +59,7 @@ Every time someting happens in the game, an event is triggered. Those events can
 
 #### Roles
 
-Custom role files have to be placed inside `lua/terrortown/entities/roles`. A more in depth documenation can be found in the [/developers/content-creation/creating-a-role/](creating a role) section.
+Custom role files have to be placed inside `lua/terrortown/entities/roles`. A more in depth documenation can be found in the [creating a role](/developers/content-creation/creating-a-role/) section.
 
 ## Publishing your Addon
 
