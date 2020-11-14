@@ -4,19 +4,20 @@ While the language registration from the original TTT still works as intended, T
 
 ## Adding a Language File
 
-To add a language file, a file with a unique name has to be created in `<addon_name>/lua/lang/<some_folder>/<your_file>.lua`. In general the `some_folder` is the language identifier and `your_file` is based on your addon name.
+To add a language file, a file with a unique name has to be created in `<addon_name>/lua/terrortown/lang/<some_folder>/<your_file>.lua`. In general the `some_folder` is the language identifier and `your_file` is based on your addon name.
 
 A finished translation structure should look like this with at least english being provied:
 ```txt
 <YOUR_ADDON>/
 └── lua/
-    └── lang/
-        ├── deutsch/
-        |   └── pharoah.lua
-        ├── english/
-        |   └── pharoah.lua
-        └── italiano/
-            └── pharoah.lua
+    └── terrortown/
+        └── lang/
+            ├── deutsch/
+            |   └── pharoah.lua
+            ├── english/
+            |   └── pharoah.lua
+            └── italiano/
+                └── pharoah.lua
 ```
 
 ## Filling the Language Files
@@ -24,7 +25,7 @@ A finished translation structure should look like this with at least english bei
 Filling the language file with content is pretty straight forward. In the first line, the language table reference has to be retreived. Following this, the returned table can be filled with contents
 
 ```lua
-L = LANG.GetLanguageTableReference("english")
+local L = LANG.GetLanguageTableReference("english")
 
 -- GENERAL ROLE LANGUAGE STRINGS
 L[PHARAOH.name] = "Pharaoh"

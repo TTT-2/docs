@@ -31,21 +31,39 @@ All your addon files have to be placed into `GarrysMod/garrysmod/addons` and are
 
 See [this source](https://wiki.facepunch.com/gmod/Lua_Folder_Structure) for a detailed overview over the standard Garry's Mod project structure.
 
+Besides the general Garry's Mod files, TTT2 also automatically loads different types of lua files from `lua/terrortown/`. Here's a list of the different types that can be used:
+
 #### General Purpose Lua Files
+
+While Garry's Mod provides it's own autorun folder, this folder has the drawback that it is loaded independant from the selected gamemode. To prevent TTT2 addons from throwing errors in other gamemodes, TTT2 now has its own fileloader.
+
+Files have to be placed in `lua/terrortown/autorun` to be loaded. However those files can't be placed directly inside this folder, but have to be placed in one of those three subfolders: `server/`, `client/`, `shared/`. Those files will be automatically included in their respective realm, therefore `AddCSLuaFile()` is not needed.
 
 #### Language
 
+Language files are a means to make translations for users easier by putting translations into their own folder and therefore keeping things cleans. Translations have to be placed in `lua/terrortown/lang/`. A more in depth documenation can be found in the [/developers/content-creation/language-support/](language support) section.
+
 #### Items
+
+While TTT2 is still compatible with old TTT items, it has its own item loader. Items for TTT2 have to be placed inside `lua/terrortown/entities/items/`.
+
+#### Themes
+
+Themes are an easy way of changing the appearance of the vgui elements. They are automatically loaded if placed inside `lua/terrortown/themes/`.
+
+#### Events
+
+Every time someting happens in the game, an event is triggered. Those events can be used to modify the player score or add some information to the round end screen. Those files have to be placed in `lua/terrortown/events/`
 
 #### Weapons
 
 #### Roles
 
-#### Classes
+Custom role files have to be placed inside `lua/terrortown/entities/roles`. A more in depth documenation can be found in the [/developers/content-creation/creating-a-role/](creating a role) section.
 
 ## Publishing your Addon
 
-## Windows
+### Windows
 
 In order to upload your addon to the Steam Workshop, you need to first compile it into a .gma file.
 
@@ -57,28 +75,10 @@ Workshop to create tags for uploads.
         ![addon_json.png](../../assets/images/article/addon_json.png)
 
     Type is the category which this addon fits into best. One of:
-
-    - "ServerContent",
-    - "gamemode",
-    - "map",
-    - "weapon",
-    - "vehicle",
-    - "npc",
-    - "tool",
-    - "effects",
-    - "model".
+    "ServerContent", "gamemode", "map", "weapon", "vehicle", "npc", "tool", "effects", "model".
 
     Tags are what describes your addon best. Choose two of:
-
-    - "fun",
-    - "roleplay",
-    - "scenic",
-    - "movie",
-    - "realism",
-    - "cartoon",
-    - "water",
-    - "comic",
-    - "build".
+    "fun", "roleplay", "scenic", "movie", "realism", "cartoon", "water", "comic", "build".
 
     Ignore is what files (you can use the \* as a wildcard to ignore file extensions - e.g. \*.txt) you dont want gmad to compile for use in the resulting .gma file.
 
