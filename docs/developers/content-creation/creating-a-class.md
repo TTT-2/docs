@@ -104,14 +104,14 @@ The `classData` argument is a table that contains all the important class settin
     A function that is called when this class is given to a player after class change or on respawn. You can use the hook `TTTCPreventClassEquipment` to prevent this function to happen.
 
     ```lua
-    classData.onClassSet = function(ply) -- [default: nil]
+    classData.OnSet = function(ply) -- [default: nil]
     ```
 
 ???+ example "On Class Unset Callback"
     A function that is called when this class is removed from a player. You can use the hook `TTTCPreventClassRemovement` to prevent this function to happen.
 
     ```lua
-    classData.onClassUnset = function(ply) -- [default: nil]
+    classData.OnUnset = function(ply) -- [default: nil]
     ```
 
 ### Active Ability
@@ -185,30 +185,30 @@ The `classData` argument is a table that contains all the important class settin
     A function that is called on activation of an ability. If `avoidWeaponReset` is set to `false` weapons will be removed prior to this function call.
 
     ```lua
-    classData.onActivate = function(ply) -- [default: nil]
+    classData.OnAbilityActivate = function(ply) -- [default: nil]
     ```
 
 ???+ example "On Class Deactivate Callback"
     A function that is called on deactivation of an ability. If `avoidWeaponReset` is set to `false` weapons will be given back prior to this function call.
 
     ```lua
-    classData.onDeactivate = function(ply) -- [default: nil]
+    classData.OnAbilityDeactivate = function(ply) -- [default: nil]
     ```
 
 ???+ example "On Class Prepare Callback"
-    A function that is called prior to `onActivate`. If this function is set, the ability will be activated on the next ability-key press. This can be used to have a two step activation procedure
+    A function that is called prior to `OnAbilityActivate`. If this function is set, the ability will be activated on the next ability-key press. This can be used to have a two step activation procedure
 
     ```lua
-    classData.onPrepareActivation = function(ply) -- [default: nil]
+    classData.OnStartPrepareAbilityActivation = function(ply) -- [default: nil]
     ```
 
     See [the Frost](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_frost.lua) for an example.
 
 ???+ example "On Class Finish Prepare Callback"
-    This function will only be called if `onPrepareActivation` was set. It is called on the second press of the ability key and is done directly before `onActivate`. If the ability was canceled in this process, this function is called prior to `onDeactivate`.
+    This function will only be called if `OnStartPrepareAbilityActivation` was set. It is called on the second press of the ability key and is done directly before `OnAbilityActivate`. If the ability was canceled in this process, this function is called prior to `OnAbilityDeactivate`.
 
     ```lua
-    classData.onFinishPreparingActivation = function(ply) -- [default: nil]
+    classData.OnFinishPrepareAbilityActivation = function(ply) -- [default: nil]
     ```
 
     See [the Frost](https://github.com/TTT-2/ttt2h-pack-default/blob/master/lua/classes/classes/class_frost.lua) for an example.
@@ -218,14 +218,14 @@ The `classData` argument is a table that contains all the important class settin
     This function is called once every frame after while a player is in the charging process, if the function is set and it returns `nil` or `false`, the charging process is stopped.
 
     ```lua
-    classData.onCharge = function(ply) -- [default: nil]
+    classData.OnCharge = function(ply) -- [default: nil]
     ```
 
 ???+ example "Check Class Activation Callback"
     This function is called when the ability should be activated. Activation fails if the function is set and it returns `nil` or `false`.
 
     ```lua
-    classData.checkActivation = function(ply) -- [default: nil]
+    classData.CheckActivation = function(ply) -- [default: nil]
     ```
 
 ## ConVarData
