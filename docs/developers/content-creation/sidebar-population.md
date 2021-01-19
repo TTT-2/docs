@@ -49,6 +49,6 @@ STATUS:RemoveStatus([ply,] id)
 
 `AddTimedStatus` has the cool feature that the icon is removed automatically after a short time period. Additionally it starts to flash five seconds prior to its removal. If you want the left duration to be shown on the icon, you can pass `true` as `showDuration` parameter. This will automatically pass the left time to the DrawInfo callback. However this can't be used together with the previously shown `DrawInfo` function.
 
-[[Check out this example]](https://github.com/TTT-2/ttt2-role_pri/blob/master/lua/autorun/sh_priest_sidebar.lua)
+[[Check out this example]](https://github.com/TTT-2/ttt2-role_pri/blob/master/lua/terrortown/autorun/shared/sh_priest_sidebar.lua)
 
 [[Full documentation in the code]](https://github.com/TTT-2/TTT2/blob/master/gamemodes/terrortown/gamemode/client/cl_status.lua)
