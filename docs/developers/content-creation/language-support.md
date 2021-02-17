@@ -2,6 +2,8 @@
 
 While the language registration from the original TTT still works as intended, TTT2 features its own way more conventient language registration system. By keeping all language strings in a seperate file, it is cleaner looking and easier for people who want to translate certain strings into other languages.
 
+TTT2 uses the `ISO 639-1` format for the language identifiers. [Read more here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+
 ## Adding a Language File
 
 To add a language file, a file with a unique name has to be created in `<addon_name>/lua/terrortown/lang/<some_folder>/<your_file>.lua`. In general the `some_folder` is the language identifier and `your_file` is based on your addon name.
@@ -12,11 +14,11 @@ A finished translation structure should look like this with at least english bei
 └── lua/
     └── terrortown/
         └── lang/
-            ├── deutsch/
+            ├── de/
             |   └── pharoah.lua
-            ├── english/
+            ├── en/
             |   └── pharoah.lua
-            └── italiano/
+            └── it/
                 └── pharoah.lua
 ```
 
@@ -25,7 +27,7 @@ A finished translation structure should look like this with at least english bei
 Filling the language file with content is pretty straight forward. In the first line, the language table reference has to be retreived. Following this, the returned table can be filled with contents
 
 ```lua
-local L = LANG.GetLanguageTableReference("english")
+local L = LANG.GetLanguageTableReference("en")
 
 -- GENERAL ROLE LANGUAGE STRINGS
 L[PHARAOH.name] = "Pharaoh"
