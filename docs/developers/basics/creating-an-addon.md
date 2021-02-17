@@ -47,9 +47,9 @@ Language files are a means to make translations for users easier by putting tran
 
 While TTT2 is still compatible with old TTT items, it has its own item loader. Items for TTT2 have to be placed inside `lua/terrortown/entities/items/`.
 
-#### Themes
+#### VSkins
 
-Themes are an easy way of changing the appearance of the vgui elements. They are automatically loaded if placed inside `lua/terrortown/themes/`.
+VSkins are an easy way of changing the appearance of the vgui elements. They are automatically loaded if placed inside `lua/terrortown/vskins/`. A more in depth documenation can be found in the [vskin](/developers/content-creation/vskin/) section.
 
 #### Events
 
