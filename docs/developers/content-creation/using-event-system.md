@@ -71,6 +71,8 @@ function EVENT:Serialize()
 end
 ```
 
+The icon is a simple white on transparent graphic with a resolution of 512x512 and a few empty pixels all the way around. Check out the [icon and design guideline](/developers/content-creation/icon-and-design-guideline/) to see how to create these icons.
+
 #### Localization
 
 There are a few strings that should be added to the localization file. The following is almost always needed:
