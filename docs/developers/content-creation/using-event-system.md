@@ -5,6 +5,9 @@ The event system is a powerful feature of TTT2 that allows content creators to d
 ???+ abstract "Round end screen with events"
     ![Icon Padding](../../assets/images/article/roundend.png)
 
+???+ note
+    If you just plan on modifying the scoring of your role, check out the [role scoring variables](/developers/content-creation/creatring-a-role/) first.
+
 ## Registering an event
 
 An event is registered by simply placing an event file in the event folder of your addon. The correct path is `lua/terrortown/events/`. Any name can be used, but it should be unique. A list of existing TTT2 events can be found [in the repository](https://github.com/TTT-2/TTT2/tree/master/gamemodes/terrortown/gamemode/shared/events). A documentation of the event base can be found in the [API docs](https://api-docs.ttt2.neoxult.de/class/EVENT/none).
