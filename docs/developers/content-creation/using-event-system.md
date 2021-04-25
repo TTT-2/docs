@@ -6,7 +6,7 @@ The event system is a powerful feature of TTT2 that allows content creators to d
     ![Icon Padding](../../assets/images/article/roundend.png)
 
 ???+ note
-    If you just plan on modifying the scoring of your role, check out the [role scoring variables](/developers/content-creation/creatring-a-role/) first.
+    If you just plan on modifying the scoring of your role, check out the [role scoring variables](/developers/content-creation/creating-a-role/) first.
 
 ## Registering an event
 
