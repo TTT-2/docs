@@ -3,9 +3,9 @@
 The mysterious karma system is mostly untouched in TTT2, but karma can now be easily added or subtracted and those changes are shown at the roundendscreen.
 
 ???+ abstract "Round end screen with detailed Karma"
-    ![Icon Padding](../../assets/images/article/roundend_karma.png)
+	![Icon Padding](../../assets/images/article/roundend_karma.png)
 
-# Adding Karma
+## Adding Karma
 
 On the server you are now able to change karma directly with the global function and don't have to deal with internal structures.
 This karma change gets applied to the base karma at the next round, before karma damage reduction calculations are done.
