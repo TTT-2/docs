@@ -121,8 +121,9 @@ events.Trigger(EVENT_<EVENT_NAME>, somePlayer)
 
 Event data is automatically networked  from the server to the client after the round has ended. However not everything is synced. While there are multiple entries that are synced, you should only modify the `self.event` table if you want to add synced data. Data directly added to the class (e.g. `self.myData = xyz`) is **not** synced.
 
-Karma-changes are by default **not** synced as they could help finding out which team another player belongs to.
-If you still need it on clients after your event occured, replace this function and return true in your event.
+Karma-changes are by default not synced per event to save networking resources.
+If you still need to know karma changes at certain events use this:
+
 ```lua
 function EVENT:ShouldKarmaChangeSynchronize()
 	return true
@@ -130,8 +131,6 @@ end
 ```
 ???+ note
     This is used in the finish-event to display the karma on roundendscreen.
-    The data is always available at the **server**, if you want to use it for events.
-    So only synchronize it, if you really need it on the **client**! 
 
 ## Cancel or replace an event
 
