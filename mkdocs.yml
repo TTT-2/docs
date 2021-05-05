@@ -49,6 +49,7 @@ nav:
         - 'developers/content-creation/sidebar-population.md'
         - 'developers/content-creation/using-targetid.md'
         - 'developers/content-creation/using-event-system.md'
+        - 'developers/content-creation/using-karma.md'
         - 'developers/content-creation/vskin.md'
         - 'developers/content-creation/language-support.md'
 
