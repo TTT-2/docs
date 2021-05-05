@@ -54,6 +54,9 @@ function targetid.FindEntityAlongView(pos, dir, filter)
 
 By using the new targetID-library and a simple script you can do it like this in the above mentioned hook "TTTModifyTargetedEntity"
 
+???+ abstract "TargetID on remote controlled entity"
+	![Icon Padding](../../assets/images/article/targetid_remote.png)
+
 ```lua
 	-- Assuming this entity is assigned
 	local remoteEntity
