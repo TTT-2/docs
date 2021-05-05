@@ -3,10 +3,10 @@
 The event system is a powerful feature of TTT2 that allows content creators to display rich event information in the round end screen, assign scores or add data to the log. In the following article it is explained how it can be used.
 
 ???+ abstract "Round end screen with events"
-	![Icon Padding](../../assets/images/article/roundend.png)
+    ![Icon Padding](../../assets/images/article/roundend.png)
 
 ???+ note
-	If you just plan on modifying the scoring of your role, check out the [role scoring variables](/developers/content-creation/creating-a-role/) first.
+    If you just plan on modifying the scoring of your role, check out the [role scoring variables](/developers/content-creation/creating-a-role/) first.
 
 ## Registering an event
 
@@ -17,60 +17,60 @@ An event is registered by simply placing an event file in the event folder of yo
 A basic event needs only the `Trigger(...)` function (which can have an arbitrary amount of parameters). However it is recommended to also define an `icon`, `title` and the `GetText()` function. `Serialize()` is recommended as well because it logs the event to the log file. `CalculateScore()` is used if the event should generate score.
 
 ???+ note
-	The event name is derived from the file name and stored in a global variable that can be accessed with `EVENT_<EVENT_NAME>`.
+    The event name is derived from the file name and stored in a global variable that can be accessed with `EVENT_<EVENT_NAME>`.
 
-	Custom defined language strings (`title`, ...) do not have to use the `<event_name>` notation, but it is recommended to do so.
+    Custom defined language strings (`title`, ...) do not have to use the `<event_name>` notation, but it is recommended to do so.
 
 ```lua
 if CLIENT then
-	EVENT.icon = Material("path/to/material")
-	EVENT.title = "title_event_<eventname>"
+    EVENT.icon = Material("path/to/material")
+    EVENT.title = "title_event_<eventname>"
 
-	function EVENT:GetText()
-		-- each returned subtable is rendered as one paragraph
-		return {
-			{
-				string = "desc_event_<eventname>",
-				params = {
-					player = self.event.finder.nick,
-				},
-				translateParams = false
-			},
-			{
-				-- ...
-			}
-		}
-	end
+    function EVENT:GetText()
+        -- each returned subtable is rendered as one paragraph
+        return {
+            {
+                string = "desc_event_<eventname>",
+                params = {
+                    player = self.event.finder.nick,
+                },
+                translateParams = false
+            },
+            {
+                -- ...
+            }
+        }
+    end
 end
 
 if SERVER then
-	-- this function is triggered when the event is triggered
-	function EVENT:Trigger(finder)
-		self:AddAffectedPlayers(
-			{finder:SteamID64()},
-			{finder:Nick()}
-		)
+    -- this function is triggered when the event is triggered
+    function EVENT:Trigger(finder)
+        self:AddAffectedPlayers(
+            {finder:SteamID64()},
+            {finder:Nick()}
+        )
 
-		return self:Add({
-			-- string indexed data can be added here
-			finder = {
-				nick = finder:Nick(),
-				sid64 = finder:SteamID64()
-			}
-		})
-	end
+        return self:Add({
+            -- string indexed data can be added here
+            finder = {
+                nick = finder:Nick(),
+                sid64 = finder:SteamID64()
+            }
+        })
+    end
 
-	-- this function is triggered to calculate the score
-	function EVENT:CalculateScore()
-		self:SetPlayerScore(self.event.finder.sid64, {
-			score = 3
-		})
-	end
+    -- this function is triggered to calculate the score
+    function EVENT:CalculateScore()
+        self:SetPlayerScore(self.event.finder.sid64, {
+            score = 3
+        })
+    end
 end
 
 -- simple text to store in the log file
 function EVENT:Serialize()
-	return self.event.finder.nick .. " has done something."
+    return self.event.finder.nick .. " has done something."
 end
 ```
 
@@ -128,11 +128,11 @@ If you still need to know karma changes at certain events use this:
 
 ```lua
 function EVENT:ShouldKarmaChangeSynchronize()
-	return true
+    return true
 end
 ```
 ???+ note
-	Synchronization is used in the finish-event to display the latest karma changes on roundendscreen.
+    Synchronization is used in the finish-event to display the latest karma changes on roundendscreen.
 
 ## Cancel or replace an event
 
@@ -154,7 +154,7 @@ end
 ```
 
 ???+ note
-	You shouldn't replace `EVENT_ROLECHANGE` because this event is used to generate the rolechange list in the round end screen.
+    You shouldn't replace `EVENT_ROLECHANGE` because this event is used to generate the rolechange list in the round end screen.
 
 [[Check out this example of a modified kill event that replaces the normal kill event]](https://github.com/TTT-2/ttt2-role_hit/blob/master/lua/terrortown/events/target_kill.lua)
 

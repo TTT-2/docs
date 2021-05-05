@@ -3,7 +3,7 @@
 TargetID is the system that displays information while looking at entities. This system got completely overhauled for TTT2 and is now easily extendable by addons.
 
 ???+ abstract "TargetID Usage Examples"
-	![Icon Padding](../../assets/images/article/targetid.png)
+    ![Icon Padding](../../assets/images/article/targetid.png)
 
 ## Adding Information
 
@@ -11,7 +11,7 @@ Adding or modifying information to the targetID element is done with a hook that
 
 ```lua
 hook.Add("TTTRenderEntityInfo", "hook_identifier", function(tData)
-	-- do something
+    -- do something
 end)
 ```
 
@@ -25,7 +25,7 @@ In some cases the targeted entity has to be modified. While this can be done in 
 
 ```lua
 hook.Add("TTTModifyTargetedEntity", "hook_identifier", function(ent, distance)
-	-- do something and return the reference to the new ent
+    -- do something and return the reference to the new ent
 end)
 ```
 
@@ -55,27 +55,27 @@ function targetid.FindEntityAlongView(pos, dir, filter)
 By using the new targetID-library and a simple script you can do it like this in the above mentioned hook "TTTModifyTargetedEntity"
 
 ???+ abstract "TargetID on remote controlled entity"
-	![Icon Padding](../../assets/images/article/targetid_remote.png)
+    ![Icon Padding](../../assets/images/article/targetid_remote.png)
 
 ```lua
-	-- Assuming this entity is assigned
-	local remoteEntity
-	local isRemoteControlled = false -- Set this to true, when being in remote-View
+    -- Assuming this entity is assigned
+    local remoteEntity
+    local isRemoteControlled = false -- Set this to true, when being in remote-View
 
-	-- Enable TargetID when controlling the sheep
-	hook.Add("TTTModifyTargetedEntity", "remoteTargetId", function()
-		if isRemoteControlled then
-			return remoteTargetId(remoteEntity)
-		end
-	end)
+    -- Enable TargetID when controlling the sheep
+    hook.Add("TTTModifyTargetedEntity", "remoteTargetId", function()
+        if isRemoteControlled then
+            return remoteTargetId(remoteEntity)
+        end
+    end)
 
-	local function remoteTargetId(ent)
-		local pos = ent:GetPos()
-		local dir = ent:GetAngles():Forward()
-		local filter = {ent} -- filters itself out, so you don't show your own targetID
+    local function remoteTargetId(ent)
+        local pos = ent:GetPos()
+        local dir = ent:GetAngles():Forward()
+        local filter = {ent} -- filters itself out, so you don't show your own targetID
 
-		targetEnt, distance = targetid.FindEntityAlongView(pos, dir, filter)
+        targetEnt, distance = targetid.FindEntityAlongView(pos, dir, filter)
 
-		return targetEnt
-	end
+        return targetEnt
+    end
 ```
