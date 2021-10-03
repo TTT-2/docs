@@ -20,6 +20,11 @@
     |**Survivalist**|You have the benefit of having a shop!|
     |**Trapper**|You may use Traitor buttons!|
     |**Wrath**|If another Innocent kills you, you will be brought back as a Traitor!|
+    |**Beacon**|You will get stronger the more people are confirmed dead!|
+    |**Lycanthrope**|You will get very powerful, if you are the last Innocent!|
+    |**Medium**|You can read a scrambled version of the Spectator chat!|
+    |**Liar**|Like the Wrath, you don't know your role! Your corpse can be turned to a Traitor corpse with one credit!|
+    |**Alchemist**|You are brewing potions over time which can help you and your teammates!|
 
 === "Detective Roles"
 
@@ -31,6 +36,8 @@
     |**Detective**|A public Innocent with access to special equipment!|
     |**Sheriff**|You can make yourself a Deputy using your Deputy Deagle!|
     |**Sniffer**|Instead of a DNA scanner you have a magnifying glass to find evildoers!|
+    |**Vigilante**|You are a Detective who does more damage if he kills evil roles and less damage if he kills friendly roles!|
+    |**Banker**|You are a Detective who receives all of the credits that every other role spends in the shop!|
 
 === "Traitor Roles"
 
@@ -38,7 +45,7 @@
 
     | _Traitor Roles_ | _Description_ |
     | - | - |
-    |**Gluton**|Has to satisfy his hunger by eating players and bodies!
+    |**Glutton**|Has to satisfy his hunger by eating players and bodies!
     |**Graverobber**|A Traitor will become this if the Ankh is placed, steal the Pharaohs Ankh!|
     |**Hitman**|Has to kill specific targets in order to get a lot of credits!|
     |**Mesmerist**|Can revive a player, turning them into a Thrall!
@@ -47,6 +54,11 @@
     |**Totemhunter**|Destroy totems to earn credits!|
     |**Traitor**|The 'bad' guys, just like you know them!|
     |**Vampire**|May transform into a bat and heal himself after killing a player!|
+    |**Executioner**|Has to kill specific targets, he also does more damage to their target and less to non-targets!|
+    |**Defective**|You are a fake Detective, who is a Traitor in reality!|
+    |**Blight**|Your killer will be infected and will slowly get damage until he is low on health!|
+    |**Accomplice**|You don't know your Traitor colleagues but they know you!|
+    |**Impostor**|He has many different powers to kill/trick the Innocents!|
 
 === "Neutral Killers"
 
@@ -58,8 +70,11 @@
     |**Infected**|Has to kill everyone! Everyone he kills will become his zombie!|
     |**Jackal**|Has to kill everyone! Can make himself a Sidekick!|
     |**Necromancer**|Has to kill everyone! Can revive players as his zombies!|
-    |**Ravenous**|Has to kill everyone! The Gluton becomes this if he gets too hungry!|
+    |**Ravenous**|Has to kill everyone! The Glutton becomes this if he gets too hungry!|
     |**Serialkiller**|Has to kill everyone! Also has a wallhack!|
+    |**Restless**|Has to kill everyone! He can die multiple times but gets weaker!|
+    |**Doppelganger**|He needs to steal roles to take the appearance/function of those but he is still in his own team!|
+    |**Hidden**|Has to kill everyone! He has special powers which can be activated!|
 
 === "Neutral Roles"
 
@@ -75,6 +90,11 @@
     |**Pirate**|You can give a player your contract and join their team!|
     |**Sidekick**|Help the one that made you a Sidekick win!|
     |**Unknown**|Has to die by another player and will become that players role!|
+    |**Medic**|He needs to help everyone or choose a team to help! He has healing powers and he can't win alone!|
+    |**Cursed**|He can't deal damage but he will always resurrect!|
+    |**Mimic**|He needs to steal roles to take the team/appearance and function of those!|
+    |**Drunk**|He has a chance to get the role of a killed player!|
+    |**Undecided**|He has to vote for a role to become one! Otherwise something bad might happen!|
     
 ## Reasons to use
 
