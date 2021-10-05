@@ -60,9 +60,11 @@ Inside this folder you will need another folder that must be called “lua” an
 
 #### Translation files
 
+I will explain only the basics here. For further information, go [this way](https://docs.ttt2.neoxult.de/developers/content-creation/language-support/#adding-a-language-file).
+
 For the translation files, you must fit the the following structure: `tt2-role_test/lua/terrortown/lang/en/tester.lua”`. 
 
-Let me explain this structure, before we’re getting to the next one. As I explained above `ttt2-role_test` is the parent folder. After that we’ve got the lua and terrortown folders. These are needed to tell TTT2 that there are files, that it shall load. The “lang”-folder contains all languages that this role is translated to. Since the global language is English and there is no getting around this language in programming, you should definitely offer your role in English. If you want to add other translations you just can add here other language folders. For example:
+Let me explain this structure, before we’re getting to the next one. As I explained above `ttt2-role_test` is the parent folder. After that we’ve got the lua and terrortown folders. These are needed to tell TTT2 that there are files, that it shall load. The “lang”-folder contains all languages that this role is translated to. Since the global language is English and there is no getting around this language in programming, you should definitely offer your role in English. If you want to add other translations you just can add here other language folders, due to the TTT2 [language support system](https://docs.ttt2.neoxult.de/developers/content-creation/language-support/). For example:
 
 `ttt2-role_test/lua/terrortown/lang/de/tester.lua`
 
@@ -72,14 +74,12 @@ This would also add a german translation. Or:
 
 For an italian translation. 
 
-A `[your role name here].lua` is then added to each language folder. We will discuss what this file does and what is written in it in a moment.
-
-For further information, go [this way](https://docs.ttt2.neoxult.de/developers/content-creation/language-support/#adding-a-language-file)
+A `[your role name here].lua` is then added to each language folder. There is no need to name the folder between "lang" and the `tester.lua` like that, but for better readability it is recommended to do so. We will discuss what this file does and what is written in it in a moment.
 
 #### The main files
 
-Of course, all files described here are important for an error-free operation of the role. Therefore, "Main Files" is perhaps even the wrong name. This refers to the files that contain the function code that gives the role the functionality it is supposed to fulfil. 
-That structure must look like this:
+Now we come to the most important files of the role. Basically, only the following paragraph would be relevant to develop the a functional role. But under it the clarity would suffer because of missing structure then too. These files contain the function code that gives the role the functionality it is supposed to fulfil. 
+That directory must look like this:
 
 `ttt2-role_test/lua/terrortown/entities/roles/tester/shared.lua`
 
@@ -91,13 +91,13 @@ In Garry’s Mod we can code on 2 levels: The server and the client. The server 
 In Garry’s Mod there are 2 ways to access either the client or the server:
 You can name a folder `server` or `client`. Every file in that folder then can be handled server-side or client-side. The problem: This is static. You cannot switch this while running the code. So these files will then always be handled only on the client or on the server.
 
-The 2. way now also explains, why the main code file is named `shared.lua`. If a file or folder is declared as shared, both client-side code and server-side code can be executed within it. And because we want to run both server and client code in the role code, the main file is called `shared.lua`.
+The second way now also explains, why the main code file is named `shared.lua`. If a file or folder is declared as shared, both client-side code and server-side code can be executed within it. And because we want to run both server and client code in the role code, the main file is called `shared.lua`.
 
 #### The ConVar files
 
 ConVars `(abbr. for “console variable”)` are used to store information on the server and the client by using the console. In TTT2 role coding we use them to give players the posibility change the options of the roles to their liking and thus customise each role to their playing style.
 
-The ConVar file must be placed here:
+It is recommended to place the ConVar file here:
 
 `ttt2-role_test/lua/terrortown/autorun/shared/sh_tester_convars.lua`
 
@@ -105,6 +105,8 @@ The autorun folder contains files that are loaded automatically when the server 
 “sh”: This is the abbreviation of shared.
 “tester”: the role’s name.
 And “convars”.
+
+This naming may look mandatory, but it is not. You can name the file whatever you want. However, if you want to follow the regular naming conventions in TTT2 development, you should name the files as described here.
 
 What’s to be written in there, will be explained in the “Optionals” chapter.  
 
@@ -116,6 +118,40 @@ Last, but not least, we must deal with the icon files. They won’t be placed in
 
 In Order to get the icon working, you must place the icon files (a vmt- & a vtf-file) in the “roles”-folder. 
 I will not go into more detail here, as this is already explained in more detail in [another article](https://docs.ttt2.neoxult.de/developers/content-creation/icon-and-design-guideline/).
+
+#### An overview to the file structure
+
+To avoid possible misunderstandings, you can see here how the file structure should look like.
+
+```text
+<YOUR_ROLE>/
+├── lua/
+│   └── terrortown/
+│       ├── autorun/
+│       │   └── shared/
+│       │   	└── sh_<YOUR_ROLE_NAME>_convars.lua
+│       ├── entities/
+│       │   └── roles/
+│       │       └── <YOUR_ROLE_NAME>/
+│ 	│	    └── shared.lua
+│	└── lang/
+|	    ├── en/
+|	    |   └── <YOUR_ROLE_NAME>.lua
+|	    ├── de/
+|	    |   └── <YOUR_ROLE_NAME>.lua
+|	    └── ../	
+|	        └── <YOUR_ROLE_NAME>.lua
+└── materials/
+    └── vgui/
+        └── ttt/
+            └── dynamic/
+                └── roles/
+                    ├── icon_<YOUR_ROLE_ABBREVIATION>.vmt
+                    └── icon_<YOUR_ROLE_ABBREVIATION>.vtf
+
+```
+
+Keep in mind that some namings are recommended and not mandatory. You can change them to whatever you want.
 
 ## Start Coding
 
@@ -133,16 +169,16 @@ if SERVER then
 end
 ```
 
-This command does not seem to be important, but it is elementary to make the addon workable. `AddCSLuaFile()` tells the server to send this file to client when they join the server. 
+This [command](https://wiki.facepunch.com/gmod/Global.AddCSLuaFile) does not seem to be important, but it is elementary to make the addon workable. `AddCSLuaFile()` tells the server to send this file to client when they join the server. 
 
-The block around it `if SERVER then…end` was mentioned before when describing what “shared” means. If you want to execute a command block server-side, you write just that around the block. If you want to execute the commands client-side, write `if CLIENT then...end` instead.
+The block around it `if SERVER then...end` was mentioned before when describing what “shared” means. If you want to execute a command block server-side, you write just that around the block. If you want to execute the commands client-side, write `if CLIENT then...end` instead.
 
 For now, we leave this block alone, but we will come back to it later. 
 The next two functions initialize the role. This process happens in the loading screen and makes the role ready for the first round. The data required for the basic operation of the role is stored in the functions. Also in this structure the roles hardly differ, because this still has nothing to do with the individual ability of it. For this reason, you can easily copy the following section:
 
 ```lua
 function ROLE:PreInitialize()
-  self.color                      = Color(209, 98, 90, 255)
+  	self.color                      = Color(209, 98, 90, 255)
 
 	self.abbr                       = "test"
 	self.surviveBonus               = 0
@@ -173,10 +209,10 @@ end
 ```
 
 I will not explain every line in detail, but I will explain the aspects that are important for our role now. Keep also in mind that you must edit this block for every role because it contains data that differs from role to role. 
-The first line defines the role’s color. It uses RGBA. Should you only be familiar with RGB: The "A" stands for alpha and defines the opacity. For role development, you should simply leave the fourth value for the color at 255. For us, only the first three values are of interest. These follow the RGB spectrum. In principle, you can give your role any color you want, but it is recommended to give Detective roles blue tones, Innocent roles green tones and Traitor roles red tones. For this role I’ve chosen a light red tone. 
+The first line defines the role’s [color](https://wiki.facepunch.com/gmod/Global.Color). It uses RGBA. Should you only be familiar with RGB: The "A" stands for alpha and defines the opacity. For role development, you should simply leave the fourth value for the color at 255. For us, only the first three values are of interest. These follow the RGB spectrum. In principle, you can give your role any color you want, but it is recommended to give Detective roles blue tones, Innocent roles green tones and Traitor roles red tones. For this role I’ve chosen a light red tone. 
 `self.abbr` defines the abbreviation of the role. We used it a few times already. The perfect length for the abbreviation is 3-5 characters. 
 
-`self.score.killsMultiplier` & `self.score.teamKillsMultiplier` is the multiplier that definies the player’s score when performing (team) kills. 
+`self.score.killsMultiplier` & `self.score.teamKillsMultiplier` is the multiplier that definies the player’s score when performing (team) kills. You can find more information to the scoring parameters [here](https://docs.ttt2.neoxult.de/developers/content-creation/creating-a-role/#scoring).
 
 `self.preventFindCredits`, `self.preventKillCredits` & `self.preventTraitorAloneCredits` should be true when the player shall not get credits throughout the round, else it should be false. For example, if you program an Innocent role, these values should be set to true.
 
@@ -243,7 +279,7 @@ Now we will give the role its function. As mentioned before, the function of the
 Next, you'll get to know a construct that you'll come across again and again, and will also use it yourself, since its importance in Garrys Mod development is very high: Hooks. 
 Hooks are not only used in TTT, but can also be found in Garry's mod in general. However, in the explanation and functionality of hooks I will explicitly deal with TTT. 
 
-Hooks are basically events that are called when their condition is met. A round of TTT is basically a series of hook calls. Whenever the circumstances in a round change, hooks come into play. Using hooks, we define how the role should react when something specific happens. If the explanation still leaves you a little confused, don't worry. Hooks are often self-explanatory when you apply them.
+[Hooks](https://wiki.facepunch.com/gmod/Hook_Library_Usage) are basically events that are called when their condition is met. A round of TTT is basically a series of hook calls. Whenever the circumstances in a round change, hooks come into play. Using hooks, we define how the role should react when something specific happens. If the explanation still leaves you a little confused, don't worry. Hooks are often self-explanatory when you apply them.
 Since we want to adjust the HP of our role when one of the Traitor colleagues dies, we need a hook that is called when a player dies. For this, Garry's mod provides us with the ["PlayerDeath" hook](https://wiki.facepunch.com/gmod/GM:PlayerDeath). 
 Open the linked GMOD Wiki page to understand the hook better. To be able to use a hook, we need to add it to our code. We can do this with the `hook.Add()` command. Garry's Mod expects us to supply 3 parameters with this command. The first place is for the name of the hook we want to call. In our case "PlayerDeath" . The second one is for the identifier. This is used to give the hook a name that can be used to recognize it. To prevent overwriting, this identifier should be a bit more extensive. It is probably best to name the hook `ttt2_heal_up_tester`. The third and last place is reserved for the function to be executed when the hook is called. This function in turn also has 3 parameters that we can use: `victim, inflictor, attacker`. As described in the GMOD Wiki article, "victim" is the player who died, "inflictor" is the item used for this and "attacker" is the player or entity that killed the "victim".
 
@@ -255,30 +291,15 @@ end)
 
 Now, before we program the actual function, we will program a few conditions that will terminate the function immediately, since these cases are not relevant to the role. 
 
-For this purpose we use so-called "if-statements". This can be used to create function blocks that are only called if the associated condition has been met. If you already have some experience, you can first try to define 2 of the 3 conditions yourself. The third condition is a bit more special. If you have problems or can't do that yet, you can scroll down further. The first condition is to prevent that the victim is also a tester. If the victim is a tester, the function should be terminated immediately. The other condition is to terminate the function if the victim is not a traitor. After all, we only want to heal the tester if the person who died was really a traitor colleague.
+For this purpose we use so-called "if-statements". This can be used to create function blocks that are only called if the associated condition has been met. If you already have some experience, you can first try to define both conditions yourself. If you have problems or can't do that yet, you can scroll down further. The first condition is to prevent that the victim is also a tester. If the victim is a tester, the function should be terminated immediately. The other condition is to terminate the function if the victim is not a traitor. After all, we only want to heal the tester if the person who died was really a traitor colleague.
 
 ```lua
-    if victim:GetSubRole() == ROLE_TESTER then return end
-  
-    if victim:GetTeam() ~= TEAM_TRAITOR then return end
+    if victim:GetSubRole() == ROLE_TESTER and victim:GetTeam() ~= TEAM_TRAITOR then return end
 
-    if SpecDM and (victim.IsGhost() and victim:IsGhost()) then return end
-```
-
-Theoretically, you can put these 3 statements directly below each other. So that you can understand them better, I have inserted paragraphs between them. 
+``` 
 Before we go any further, let's try to understand these statements now.
 
-`if victim:GetSubRole() == ROLE_TESTER then return end`
-
-“==” means something like "is equal". "~=" would mean "is unequal". Basically the line means "If the victim is tester as subrole" (if victim:GetSubRole() == ROLE_TESTER), then terminate the function (then return end). At this point it is important to access the subrole. If the base role were accessed, the tester would be a traitor.
-
-`if victim:GetTeam() ~= TEAM_TRAITOR then return end`
-
-This line means: If the victim is not a member of the traitor team (if victim:GetTeam() ~= TEAM_TRAITOR), then terminate the function. Here, again, it is important to access the Traitor Team and not the Traitor role, as we want to include other Traitor roles, such as the Vampire, for the function.
-
-`if SpecDM and (victim.IsGhost() and victim:IsGhost()) then return end`
-
-This line is something special. It shall prevent the function from being called when the players are playing Spectator Deathmatch.
+Basically the line means "If the victim is tester as subrole and the victim is not a member of the traitor team, then terminate the function (then return end)". At this point it is important to access the subrole. If the base role were accessed, the tester would be a traitor. It is also important to access the Traitor Team and not the Traitor role, as we want to include other Traitor roles, such as the Vampire, for the function.
 
 With these conditions, we can ensure that the subsequent code is called only if the victim belonging to the hook is a Traitor colleague.
 
@@ -348,7 +369,7 @@ if SERVER then
 		for i = 1, #plys do
 			local ply = plys[i]
 
-			if ply:GetSubRole() == ROLE_TESTER and ply:Alive() then
+			if ply:GetSubRole() == ROLE_TESTER and ply:Alive() and ply:IsActive() then
 
 				-- is the player's health beneath 100, he gains an amount of hp
 				if ply:Health() < ply:GetMaxHealth() then
@@ -365,8 +386,6 @@ if SERVER then
 	end)
 end
 ```
-
-Before I get to the conclusion of this chapter, I want to remind you of the importance of hooks: Never write functional code outside of a hook. I made this mistake myself once. As a result, the corresponding role worked in the first round, but after that it led to problems. It at least worked for one round, but it was only one round. And a role must work every round. Not everything has to be programmed in hooks without exception, yet they are a central part of role programming. Keep this in mind.
 
 And that's basically it. You have now created a working Traitor role. However, the role is now hard-coded. It cannot be flexibly adjusted in various places and, above all, the user has little control over the settings of the role without having to program it himself. For this reason I will go into a few optional details that you should definitely take into account in the following chapter. It will contain some tips and at the end the whole code to follow. Please note that this code contains the optional improvements.
 
@@ -398,7 +417,7 @@ For the first step, we add the package to the first server code block. I'll show
     end
 ```
 
-`ttt2_test_role_popup` is not the message to be sent, but the identifier for the data package. To prevent overwriting, a fancy but recognizable name should again be chosen here.
+`ttt2_test_role_popup` is not the message to be sent, but the identifier for the data package. To prevent overwriting, a unique name should again be chosen here.
 
 With this, we have already completed the first step and can move on to the 2nd one.
 To send the packet at the right time we need to edit the if-else block.
@@ -471,9 +490,9 @@ Go here for that:
 Here you can create ConVars by doing this:
 
 ```lua
-CreateConVar("ttt_tester_health_above_100", 200, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED})
-CreateConVar("ttt_tester_health_beneath_100", 125, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED})
-CreateConVar("ttt_tester_send_popup", 1, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED})
+CreateConVar("ttt_tester_health_above_100", 200, {FCVAR_ARCHIVE, FCVAR_NOTIFY})
+CreateConVar("ttt_tester_health_beneath_100", 125, {FCVAR_ARCHIVE, FCVAR_NOTIFY})
+CreateConVar("ttt_tester_send_popup", 1, {FCVAR_ARCHIVE, FCVAR_NOTIFY})
 ```
 
 The first placeholder is for the ConVar’s identifier. The second one’s the default value and the third one are the ConVar’s flags. Besides these 3 there are a number of flags, the whole list can be found in the [GMOD Wiki](https://wiki.facepunch.com/gmod/Enums/FCVAR).
