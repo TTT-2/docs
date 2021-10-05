@@ -14,7 +14,7 @@ This karma change gets applied to the base karma at the next round, before karma
 -- Player ply - Affected Player
 -- Number amount - Amount of karma that gets changed, can be negative
 -- String reason - It will be displayed in the roundendscreen as tooltip
---				   Use language localization or give it a short name
+--                 Use language localization or give it a short name
 function KARMA.DoKarmaChange(ply, amount, reason)
 ```
 

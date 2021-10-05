@@ -58,24 +58,24 @@ By using the new targetID-library and a simple script you can do it like this in
     ![Icon Padding](../../assets/images/article/targetid_remote.png)
 
 ```lua
-    -- Assuming this entity is assigned
-    local remoteEntity
-    local isRemoteControlled = false -- Set this to true, when being in remote-View
+-- Assuming this entity is assigned
+local remoteEntity
+local isRemoteControlled = false -- Set this to true, when being in remote-View
 
-    -- Enable TargetID when controlling the sheep
-    hook.Add("TTTModifyTargetedEntity", "remoteTargetId", function()
-        if isRemoteControlled then
-            return remoteTargetId(remoteEntity)
-        end
-    end)
-
-    local function remoteTargetId(ent)
-        local pos = ent:GetPos()
-        local dir = ent:GetAngles():Forward()
-        local filter = {ent} -- filters itself out, so you don't show your own targetID
-
-        targetEnt, distance = targetid.FindEntityAlongView(pos, dir, filter)
-
-        return targetEnt
+-- Enable TargetID when controlling the sheep
+hook.Add("TTTModifyTargetedEntity", "remoteTargetId", function()
+    if isRemoteControlled then
+        return remoteTargetId(remoteEntity)
     end
+end)
+
+local function remoteTargetId(ent)
+    local pos = ent:GetPos()
+    local dir = ent:GetAngles():Forward()
+    local filter = {ent} -- filters itself out, so you don't show your own targetID
+
+    targetEnt, distance = targetid.FindEntityAlongView(pos, dir, filter)
+
+    return targetEnt
+end
 ```

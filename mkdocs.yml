@@ -52,6 +52,7 @@ nav:
         - 'developers/content-creation/using-karma.md'
         - 'developers/content-creation/vskin.md'
         - 'developers/content-creation/language-support.md'
+        - 'developers/content-creation/sql-orm.md'
 
 # Customization
 extra:
