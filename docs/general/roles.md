@@ -95,6 +95,9 @@
     |**Mimic**|He needs to steal roles to take the team/appearance and function of those!|
     |**Drunk**|He has a chance to get the role of a killed player!|
     |**Undecided**|He has to vote for a role to become one! Otherwise something bad might happen!|
+    |**Beggar**|Needs a shop item from a player to get the role of the player! He is a Jester role!|
+    |**Clown**|Needs to survive until the round end, to kill everyone! He is a Jester role!|
+    |**Swapper**|If he gets killed he will transform to the role of the killer and the killer will be the new Swapper! He is a Jester role!|
     
 ## Reasons to use
 
