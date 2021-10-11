@@ -78,7 +78,7 @@ A `[your role name here].lua` is then added to each language folder. There is no
 
 #### The main files
 
-Now we come to the most important files of the role. Basically, only the following paragraph would be relevant to develop the a functional role. But under it the clarity would suffer because of missing structure then too. These files contain the function code that gives the role the functionality it is supposed to fulfil. 
+Now we come to the most important files of the role. Basically, only the following paragraph would be relevant to develop a functional role. But then you would have to write all your code in one file and the clarity and readability would suffer because of the missing structure. These files contain the function code that gives the role the functionality it is supposed to fulfil. 
 That directory must look like this:
 
 `ttt2-role_test/lua/terrortown/entities/roles/tester/shared.lua`
@@ -133,8 +133,8 @@ To avoid possible misunderstandings, you can see here how the file structure sho
 │       ├── entities/
 │       │   └── roles/
 │       │       └── <YOUR_ROLE_NAME>/
-│ 	│	    └── shared.lua
-│	└── lang/
+│       │           └── shared.lua
+│       └── lang/
 |	    ├── en/
 |	    |   └── <YOUR_ROLE_NAME>.lua
 |	    ├── de/
@@ -397,7 +397,7 @@ In this section we want to optimize the tester in 2 more places. I would like to
 
 #### The net library
 
-But before we take care of the ConVars, we first include the net library. We use this to send data back and forth between the server and the client. Perhaps you can see, the net library is something, you will need many times in the future cecause there is always data to be exchanged between client and server. Especially when developing addons for a multiplayer game, like Garry's mod respectively in our case TTT2 is.
+But before we take care of the ConVars, we first include the net library. We use this to send data back and forth between the server and the client. Perhaps you can see, the net library is something, you will need many times in the future because there is always data to be exchanged between client and server. Especially when developing addons for a multiplayer game, like Garry's Mod respectively in our case TTT2 is.
 
 I will show you the net library with a specific example, but the net library can do much more and is also much more complex. For this reason I still recommend you to read and understand the [corresponding wiki article](https://wiki.facepunch.com/gmod/Net_Library_Usage).
 
@@ -474,7 +474,7 @@ L["ttt2_desc_" .. TESTER.name] = [[The Tester needs to win with the traitors!]]
 L["ttt2_role_tester_epop"] = "While some lose strength, others gain new strength!"
 ```
 
-For the displayed color, we use the color code of the roll here, but in a slightly lighter form. This is described by means of `color = TESTER.ltcolor`. 
+For the displayed color, we use the color code of the role here, but in a slightly lighter form. This is described by means of `color = TESTER.ltcolor`. 
 If we now execute the role in the game, we can see the text when healing.
 
 #### The integration of ConVars
