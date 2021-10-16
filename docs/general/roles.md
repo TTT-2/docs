@@ -25,6 +25,9 @@
     |**Medium**|You can read a scrambled version of the Spectator chat!|
     |**Liar**|Like the Wrath, you don't know your role! Your corpse can be turned to a Traitor corpse with one credit!|
     |**Alchemist**|You are brewing potions over time which can help you and your teammates!|
+    |**Oracle**|You will get information after some time about the team in which two random players could be in!|
+    |**Sacrifice**|You can revive one dead player for the price of your life!|
+    |**Nova**|You will explode after a random amount of time leaving nothing of your body left!|
 
 === "Detective Roles"
 
@@ -38,6 +41,7 @@
     |**Sniffer**|Instead of a DNA scanner you have a magnifying glass to find evildoers!|
     |**Vigilante**|You are a Detective who does more damage if he kills evil roles and less damage if he kills friendly roles!|
     |**Banker**|You are a Detective who receives all of the credits that every other role spends in the shop!|
+    |**Revolutionary**|You have access to the Traitor equipment instead of the Detective equipment!|
 
 === "Traitor Roles"
 
