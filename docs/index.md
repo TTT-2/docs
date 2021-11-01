@@ -48,7 +48,7 @@ Custom roles are a very big part of TTT2. It adds the possibility to introduce n
 
 [Check out this workshop list](https://steamcommunity.com/workshop/filedetails/?id=1357745995) for a overview of roles for TTT2.  
 
-If you plan on creating your own custom role, check out this wiki article (TBA).  
+If you plan on creating your own custom role, check out [this wiki article](https://docs.ttt2.neoxult.de/developers/content-creation/creating-a-role/).  
 
 ### New Class System
 
@@ -58,7 +58,7 @@ You have to use [TTTC](https://steamcommunity.com/sharedfiles/filedetails/?id=13
 
 [Check out this workshop list](https://steamcommunity.com/workshop/filedetails/?id=1368039514) for a overview of classes for TTT2.  
 
-If you plan on creating your own custom class, check out this wiki article.  
+If you plan on creating your own custom class, check out [this wiki article](https://docs.ttt2.neoxult.de/developers/content-creation/creating-a-class/).  
 
 ### Rethought UI System
 
