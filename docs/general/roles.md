@@ -28,6 +28,7 @@
     |**Oracle**|You will get information after some time about the team in which two random players could be in!|
     |**Sacrifice**|You can revive one dead player for the price of your life!|
     |**Nova**|You will explode after a random amount of time leaving nothing of your body left!|
+    |**Seance**|You can see dead people as yellow orbs!|
 
 === "Detective Roles"
 
@@ -102,6 +103,8 @@
     |**Beggar**|Needs a shop item from a player to get the role of the player! He is a Jester role!|
     |**Clown**|Needs to survive until the round end, to kill everyone! He is a Jester role!|
     |**Swapper**|If he gets killed he will transform to the role of the killer and the killer will be the new Swapper! He is a Jester role!|
+    |**Elderly**|You have to stay alive in order to win with the last team!|
+    |**Leech**|You have to stay alive and you need to be near a player to win with the last team! If you are not near a player you will become more and more hungry and die!|
     
 ## Reasons to use
 
