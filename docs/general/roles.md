@@ -64,6 +64,7 @@
     |**Blight**|Your killer will be infected and will slowly get damage until he is low on health!|
     |**Accomplice**|You don't know your Traitor colleagues but they know you!|
     |**Impostor**|He has many different powers to kill/trick the Innocents!|
+    |**Imitator**|He is a Traitor with no shop who can imitate any Innocent role!|
 
 === "Neutral Killers"
 
