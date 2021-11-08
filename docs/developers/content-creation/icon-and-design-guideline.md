@@ -48,22 +48,43 @@ Once the image is exported as a `*.png`, it has to be inported into VTF Edit. On
 ???+ tip
     Press `view -> mask` to show the transparent background.
 
+In the last step the file has to be exported as a `*.vtf` file. The associated `*.vmt` file can be exported as well. Alternatively it can be created by hand using the provided template.
+
+Both files should be placed in the same folder and have the same name.
+
+### Simple Icons
+
 ???+ abstract "Options in the General Tab Are Changed, the Rest Stays Untouched"
     ![Icon VTF Options](../../assets/images/article/vtf_settings.png)
 
-In the last step the file has to be exported as a `*.vtf` file. The associated `*.vmt` file can be exported as well. Alternatively it can be created by hand using this template:
+VMT-template:
 
 ```json
 "UnlitGeneric"
 {
-	"$basetexture" "<path/to/vtf>"
-	"$nocull" 1
-	"$nodecal" 1
-	"$nolod" 1
-	"$translucent" 1
-	"$vertexalpha" 1
-	"$vertexcolor" 1
+    "$basetexture" "<path/to/vtf>"
+    "$nocull" 1
+    "$nodecal" 1
+    "$nolod" 1
+    "$translucent" 1
+    "$vertexalpha" 1
+    "$vertexcolor" 1
 }
 ```
 
-Both files should be placed in the same folder and have the same name.
+### Classic Icons
+
+???+ abstract "Options in the General Tab Are Changed, the Rest Stays Untouched"
+    ![Icon VTF Options](../../assets/images/article/vtf_settings_2.png)
+
+VMT-template:
+
+```json
+"UnlitGeneric"
+{
+    "$basetexture" "<path/to/vtf>"
+    "$translucent" 1
+    "$vertexalpha" 1
+    "$vertexcolor" 1
+}
+```
