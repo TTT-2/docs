@@ -29,6 +29,8 @@
     |**Sacrifice**|You can revive one dead player for the price of your life!|
     |**Nova**|You will explode after a random amount of time leaving nothing of your body left!|
     |**Seance**|You can see dead people as yellow orbs!|
+    |**Pure**|You blind the person who kills you and if you kill someone you will become an Innocent!|
+    |**Hurricane**|You have a Traitor shop but you don't get any credits throughout the round! You cannot win alone but you can mark players as suspicious if you shoot them or throw a grenade at them! These players can only reach a specific amount of HP throughout the round! Only one player can be marked, so be aware of the Cyclone, who can also mark players!|
 
 === "Detective Roles"
 
@@ -65,6 +67,9 @@
     |**Accomplice**|You don't know your Traitor colleagues but they know you!|
     |**Impostor**|He has many different powers to kill/trick the Innocents!|
     |**Imitator**|He is a Traitor with no shop who can imitate any Innocent role!|
+    |**Arsonist**|You are a Traitor with fire resistance, a flamethrower and a flare gun!|
+    |**Haunted**|Like the Spectre, but now as a Traitor!|
+    |**Cyclone**|You are a normal Traitor but you can mark players as suspicious if you shoot them or throw a grenade at them! These players can only reach a specific amount of HP throughout the round! Only one player can be marked, so be aware of the Hurricane, who can also mark players!|
 
 === "Neutral Killers"
 
@@ -106,6 +111,7 @@
     |**Swapper**|If he gets killed he will transform to the role of the killer and the killer will be the new Swapper! He is a Jester role!|
     |**Elderly**|You have to stay alive in order to win with the last team!|
     |**Leech**|You have to stay alive and you need to be near a player to win with the last team! If you are not near a player you will become more and more hungry and die!|
+    |**Thief**|You need to stay alive to steal the win from the others!|
     
 ## Reasons to use
 
