@@ -70,6 +70,7 @@
     |**Arsonist**|You are a Traitor with fire resistance, a flamethrower and a flare gun!|
     |**Haunted**|Like the Spectre, but now as a Traitor!|
     |**Cyclone**|You are a normal Traitor but you can mark players as suspicious if you shoot them or throw a grenade at them! These players can only reach a specific amount of HP throughout the round! Only one player can be marked, so be aware of the Hurricane, who can also mark players!|
+    |**Roider**|You deal heavy damage with your crowbar, but you can only deal damage this way!|
 
 === "Neutral Killers"
 
