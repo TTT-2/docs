@@ -31,6 +31,9 @@
     |**Seance**|You can see dead people as yellow orbs!|
     |**Pure**|You blind the person who kills you and if you kill someone you will become an Innocent!|
     |**Hurricane**|You have a Traitor shop but you don't get any credits throughout the round! You cannot win alone but you can mark players as suspicious if you shoot them or throw a grenade at them! These players can only reach a specific amount of HP throughout the round! Only one player can be marked, so be aware of the Cyclone, who can also mark players!|
+    |**Revenant**|If you die, you will be brought back as a Revenant with your own team and the goal of killing everyone!|
+    |**Defector**|You will be transformed to a Traitor if one of them drops you a Defector Jihad! You can only do damage with the Defector Jihad!|
+    |**Guardian**|You can shoot a player with the Guardian Deagle which provides them with a health bonus! Be aware that you get damage if the healed player gets damage!|
 
 === "Detective Roles"
 
@@ -71,6 +74,8 @@
     |**Haunted**|Like the Spectre, but now as a Traitor!|
     |**Cyclone**|You are a normal Traitor but you can mark players as suspicious if you shoot them or throw a grenade at them! These players can only reach a specific amount of HP throughout the round! Only one player can be marked, so be aware of the Hurricane, who can also mark players!|
     |**Roider**|You deal heavy damage with your crowbar, but you can only deal damage this way!|
+    |**Sleeper**|You are an Innocent until all Traitors are dead, afterwards you will be transformed to a Traitor!|
+    |**Blocker**|While you are alive nobody can identify bodies except yourself!|
 
 === "Neutral Killers"
 
@@ -87,6 +92,7 @@
     |**Restless**|Has to kill everyone! He can die multiple times but gets weaker!|
     |**Doppelganger**|He needs to steal roles to take the appearance/function of those but he is still in his own team!|
     |**Hidden**|Has to kill everyone! He has special powers which can be activated!|
+    |**Duelist**|Has to kill an other Duelist to receive his previous role and team!|
 
 === "Neutral Roles"
 
