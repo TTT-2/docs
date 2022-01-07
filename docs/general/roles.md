@@ -76,6 +76,7 @@
     |**Roider**|You deal heavy damage with your crowbar, but you can only deal damage this way!|
     |**Sleeper**|You are an Innocent until all Traitors are dead, afterwards you will be transformed to a Traitor!|
     |**Blocker**|While you are alive nobody can identify bodies except yourself!|
+    |**Shanker**|You have no shop but you are equipped with a radar and a special knife which kills Innocents instantly when you attack them from behind!|
 
 === "Neutral Killers"
 
@@ -119,6 +120,7 @@
     |**Elderly**|You have to stay alive in order to win with the last team!|
     |**Leech**|You have to stay alive and you need to be near a player to win with the last team! If you are not near a player you will become more and more hungry and die!|
     |**Thief**|You need to stay alive to steal the win from the others!|
+    |**Loot Goblin**|You are a Jester role who is smaller and faster than everyone else but you cannot deal damage! If someone wins you will be the winner of the round! You are also dropping a random Traitor item if you get killed!|
     
 ## Reasons to use
 
