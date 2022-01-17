@@ -48,6 +48,7 @@
     |**Vigilante**|You are a Detective who does more damage if he kills evil roles and less damage if he kills friendly roles!|
     |**Banker**|You are a Detective who receives all of the credits that every other role spends in the shop!|
     |**Revolutionary**|You have access to the Traitor equipment instead of the Detective equipment!|
+    |**Master Chief**|You have a special rifle equipped, and you have also more health, armor, and a special playermodel!|
 
 === "Traitor Roles"
 
@@ -77,6 +78,7 @@
     |**Sleeper**|You are an Innocent until all Traitors are dead, afterwards you will be transformed to a Traitor!|
     |**Blocker**|While you are alive nobody can identify bodies except yourself!|
     |**Shanker**|You have no shop but you are equipped with a radar and a special knife which kills Innocents instantly when you attack them from behind!|
+    |**Ajin**|If you are the last player alive your hidden strength will be unleashed! You get extra speed, sprint regeneration and more damage! Additionally, you gain extra health, armor, and your health regenerates faster!|
 
 === "Neutral Killers"
 
