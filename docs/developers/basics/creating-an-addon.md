@@ -63,6 +63,8 @@ Custom role files have to be placed inside `lua/terrortown/entities/roles`. A mo
 
 ## Publishing your Addon
 
+The most easy way of publishing your addon is with the [GMPublisher](https://github.com/WilliamVenner/gmpublisher). Follow their guide on how to use it. If you want to manually upload it or write a script to automate it, you can follow the description written here.
+
 ### Windows
 
 In order to upload your addon to the Steam Workshop, you need to first compile it into a .gma file.
@@ -87,7 +89,7 @@ Workshop to create tags for uploads.
 1. Drag and drop your addon folder onto gmad.exe. This will generate a .gma file and place it into the same directory that your original folder came from.
 
     Alternatively you can use the cmd which gives you better error messages. Navigate to the GMod bin folder on the cmd and type gmad.exe, this gives you the gmad usage info. Input the directory to your addon folder and specify the output file directory and name.
-    
+
     ???+ abstract "gmad help output"
         ![gmad_info.png](../../assets/images/article/gmad_info.png)
 
