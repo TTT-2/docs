@@ -167,22 +167,28 @@ After the last command you should now have a shell that looks like this:
 Steam>
 ```
 
-The Garrysmod and Counterstrike:Source serverfiles do not require an account that owns the game, so we will login anonymously:
-
-```steamcmd
-login anonymous
-```
-
 Before we install something we can (and should) specify a directory where the files should be installed:
 
 ```steamcmd
 force_install_dir /home/steam/gmod_ds/
 ```
 
+The Garrysmod and Counterstrike:Source serverfiles do not require an account that owns the game, so we will login anonymously:
+
+```steamcmd
+login anonymous
+```
+
 After that we can install/update:
 
 ```steamcmd
 app_update 4020 -validate
+```
+
+To keep this order is mandatory. If you would log in first and then try to select a directory, the SteamCMD would give you an error: 
+
+```
+Please use force_install_dir before logon!
 ```
 
 !!! tip
@@ -195,11 +201,12 @@ force_install_dir /home/steam/css_ds/
 app_update 232330 -validate
 ```
 
-This is all we need to do with SteamCMD so we can now quit it:
+However, since you are currently logged in, you will now need to restart SteamCMD for this command before you can use it. Otherwise you would get the error from above again. This can be done by using this command:
 
 ```steamcmd
 quit
 ```
+The SteamCMD wil be closed and you can start it once again. If you have installed the CSS files as shown above, you can use this command to exit SteamCMD, since you no longer need it. 
 
 ## Basic Configuration
 
