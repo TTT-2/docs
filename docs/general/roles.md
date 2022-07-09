@@ -117,7 +117,7 @@
     |**Blitz**|You have a massive amount of health and you need to kill everyone!|
     |**Suicide Barrel**|You win if you infect everyone before the timer runs out!|
     |**Cult Leader & Cultists**|You win if you convert everyone to Cultists or if everyone is dead! Your special tome allows you to damage enemies and to heal your fellow Cultists!|
-    |**LUNK**|You don't flinch back and no one can deal damage to you! Your goal is to kill everyone with your fists which deal a lot of damage! If you spawn all other players will be switched to the same team!|
+    |**Lunk**|You don't flinch back and no one can deal damage to you! Your goal is to kill everyone with your fists which deal a lot of damage! If you spawn all other players will be switched to the same team!|
 
 === "Neutral Roles"
 
