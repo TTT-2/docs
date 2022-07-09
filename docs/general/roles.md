@@ -34,6 +34,10 @@
     |**Revenant**|If you die, you will be brought back as a Revenant with your own team and the goal of killing everyone!|
     |**Defector**|You will be transformed to a Traitor if one of them drops you a Defector Jihad! You can only do damage with the Defector Jihad!|
     |**Guardian**|You can shoot a player with the Guardian Deagle which provides them with a health bonus! Be aware that you get damage if the healed player gets damage!|
+    |**Sus**|You are an Innocent but you could turn into a Traitor with a 50 % probability!|
+    |**Yandere & Senpai**|You are an Innocent but you need to guard Senpai to win with him! If Senpai dies or if you mutilate too many corpses you mental state will go down! If you get crazy you will be turned into a powerful Yangire who needs to kill everyone except Senpai!|
+    |**Poisoner**|The terrorist who kills you will get poisoned and will lose a lot of health!|
+    |**Mute**|Your voice and text chat is not working while you can't equip weapons! You have a very good radar which shows you many information about the other players and you need to convince trustworthy players that your information is valid!|
 
 === "Detective Roles"
 
@@ -49,6 +53,12 @@
     |**Banker**|You are a Detective who receives all of the credits that every other role spends in the shop!|
     |**Revolutionary**|You have access to the Traitor equipment instead of the Detective equipment!|
     |**Master Chief**|You have a special rifle equipped, and you have also more health, armor, and a special playermodel!|
+    |**Warrior Priest**|You have a special tome equipped which can heal allies and wound enemies, and you have also more health and armor!|
+    |**Mayor**|You have a voters list which tells you the role of a player but everytime it pops up its a different player!|
+    |**Guard & Agent**|You have a camera and you need to help the player while the Agent is using the camera to kill everyone!|
+    |**Astronaut**|Your special meeting maker device gives you the ability to halt a vote! The terrorists can vote on someone to kill, but be careful not to vote out Innocents!|
+    |**Link**|You have not only the shop but also armor, more health and a unique playermodel!|
+    |**Hunch**|You see the death of other players but if too many die you will take damage!|
 
 === "Traitor Roles"
 
@@ -79,6 +89,8 @@
     |**Blocker**|While you are alive nobody can identify bodies except yourself!|
     |**Shanker**|You have no shop but you are equipped with a radar and a special knife which kills Innocents instantly when you attack them from behind!|
     |**Ajin**|If you are the last player alive your hidden strength will be unleashed! You get extra speed, sprint regeneration and more damage! Additionally, you gain extra health, armor, and your health regenerates faster!|
+    |**Phantom**|You have no shop and when your corpse gets examined by an Innocent role he dies!|
+    |**Gambler**|You have no credits and you must use the random items which are given to you at round start!|
 
 === "Neutral Killers"
 
@@ -96,11 +108,21 @@
     |**Doppelganger**|He needs to steal roles to take the appearance/function of those but he is still in his own team!|
     |**Hidden**|Has to kill everyone! He has special powers which can be activated!|
     |**Duelist**|Has to kill an other Duelist to receive his previous role and team!|
+    |**The Flood**|You have many different forms! Combat form which allows you to kill and infect other players with weapons and items but you are slow and weak! Tank form has more health and even armor but no items and no ranged weapons! Infection form allows you to be small, fast and very infectious! Elite form occurs when an infector takes over a corpse as its host and if you get killed the infector has a second chance!|
+    |**Godfather & Mafioso**|You have a shop and more health! You are against everyone except the Mafioso players who are on your side!|
+    |**Doom Slayer**|You have special equipment and abilities which help you to kill everyone!|
+    |**Suicide Grunt**|You are part of the Covenant team! You can kill yourself and other players with a massive explosion! If you die to enemy fire you stay dead otherwise you respawn!|
+    |**Hunters**|You are part of the Covenant team! You get a partner at round start and if he dies you go into a rage with a special weapon!|
+    |**Bandit**|You have the shop of the Detective and you need to kill everyone!|
+    |**Blitz**|You have a massive amount of health and you need to kill everyone!|
+    |**Suicide Barrel**|You win if you infect everyone before the timer runs out!|
+    |**Cult Leader & Cultists**|You win if you convert everyone to Cultists or if everyone is dead! Your special tome allows you to damage enemies and to heal your fellow Cultists!|
+    |**LUNK**|You don't flinch back and no one can deal damage to you! Your goal is to kill everyone with your fists which deal a lot of damage! If you spawn all other players will be switched to the same team!|
 
 === "Neutral Roles"
 
     _They have individual win conditions and playstyles and may be able to  
-    win with major or minor factions._
+    win with major or minor factions!_
 
     | _Neutral Roles_ | _Description_ |
     | - | - |
@@ -123,6 +145,11 @@
     |**Leech**|You have to stay alive and you need to be near a player to win with the last team! If you are not near a player you will become more and more hungry and die!|
     |**Thief**|You need to stay alive to steal the win from the others!|
     |**Loot Goblin**|You are a Jester role who is smaller and faster than everyone else but you cannot deal damage! If someone wins you will be the winner of the round! You are also dropping a random Traitor item if you get killed!|
+    |**Streamer & Simps**|You are a neutral role who needs to pick up dropped items from other players! If you pick these items up the player who dropped it will join your team and will be turned into a Simp!|
+    |**Devil**|You are a neutral role who sees the Traitors! Your goal is to kill them all!|
+    |**Kobold Hoarder**|You are faster and shorter than other players! Collect weapons to win the round!|
+    |**Skele-Doot**|You annoy everyone with your special weapon and you cannot win or lose!|
+    |**Necrohealiac**|If a player dies you will heal up!|
     
 ## Reasons to use
 
