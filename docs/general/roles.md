@@ -59,6 +59,7 @@
     |**Astronaut**|Your special meeting maker device gives you the ability to halt a vote! The terrorists can vote on someone to kill, but be careful not to vote out Innocents!|
     |**Link**|You have not only the shop but also armor, more health and a unique playermodel!|
     |**Hunch**|You see the death of other players but if too many die you will take damage!|
+    |**Chef**|You can not only cook but also heal everyone every 10 minutes!|
 
 === "Traitor Roles"
 
@@ -91,6 +92,7 @@
     |**Ajin**|If you are the last player alive your hidden strength will be unleashed! You get extra speed, sprint regeneration and more damage! Additionally, you gain extra health, armor, and your health regenerates faster!|
     |**Phantom**|You have no shop and when your corpse gets examined by an Innocent role he dies!|
     |**Gambler**|You have no credits and you must use the random items which are given to you at round start!|
+    |**Brainwasher**|You have a deagle which converts Innocents to slaves of the Traitors but only for the time you are alive! Eliminate all other terrorists with the help of the Traitors!|
 
 === "Neutral Killers"
 
@@ -118,6 +120,7 @@
     |**Suicide Barrel**|You win if you infect everyone before the timer runs out!|
     |**Cult Leader & Cultists**|You win if you convert everyone to Cultists or if everyone is dead! Your special tome allows you to damage enemies and to heal your fellow Cultists!|
     |**Lunk**|You don't flinch back and no one can deal damage to you! Your goal is to kill everyone with your fists which deal a lot of damage! If you spawn all other players will be switched to the same team!|
+    |**Copycat**|You have access to the Copycat Files which is a list of all roles you have investigated! Every 30 seconds you can switch to a role from the list but not the same role twice! You have 1 credit point and you can earn credits but you don't have access to a shop!|
 
 === "Neutral Roles"
 
