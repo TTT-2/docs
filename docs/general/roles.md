@@ -93,6 +93,7 @@
     |**Phantom**|You have no shop and when your corpse gets examined by an Innocent role he dies!|
     |**Gambler**|You have no credits and you must use the random items which are given to you at round start!|
     |**Brainwasher**|You have a deagle which converts Innocents to slaves of the Traitors but only for the time you are alive! Eliminate all other terrorists with the help of the Traitors!|
+    |**Hanfei**|You have no shop but instead an AK, C4, more health and armor! Your death causes an explosion which is deadly for the enemies around your corpse!|
 
 === "Neutral Killers"
 
@@ -121,6 +122,9 @@
     |**Cult Leader & Cultists**|You win if you convert everyone to Cultists or if everyone is dead! Your special tome allows you to damage enemies and to heal your fellow Cultists!|
     |**Lunk**|You don't flinch back and no one can deal damage to you! Your goal is to kill everyone with your fists which deal a lot of damage! If you spawn all other players will be switched to the same team!|
     |**Copycat**|You have access to the Copycat Files which is a list of all roles you have investigated! Every 30 seconds you can switch to a role from the list but not the same role twice! You have 1 credit point and you can earn credits but you don't have access to a shop!|
+    |**Heretic**|You have the ability to sacrifice your soul to a demon to receive special powers! All players will be notified about your sacrifice and about the demon you have chosen! You have access to a shop but no credit points at start!|
+    |**Speedrunner**|You have to kill everyone quickly before the timer runs out! While the clock is ticking you will receive immunity to death and immense speed but if the timer hits zero you will die permanently!|
+    |**Anonymous**|You are like the Serialkiller but you can have friends! Your friends are not known to you and you are weaker than the Serialkiller! Try to kill everyone with caution!|
 
 === "Neutral Roles"
 
@@ -153,6 +157,8 @@
     |**Kobold Hoarder**|You are faster and shorter than other players! Collect weapons to win the round!|
     |**Skele-Doot**|You annoy everyone with your special weapon and you cannot win or lose!|
     |**Necrohealiac**|If a player dies you will heal up!|
+    |**Collusionist**|You are a Jester role who begs for items! If you receive an item you will also receive the role of the player who gave you the item while he dies!|
+    |**Dunce**|You will appear as a Dunce if you have killed a Jester in the previous round! Everyone sees you and you can't damage anyone! You can only win if everyone dies!|
     
 ## Reasons to use
 
