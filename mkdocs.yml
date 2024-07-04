@@ -1,67 +1,73 @@
 # Project information
-site_name: 'TTT2 Documentation'
+site_name: "TTT2 Documentation"
 site_description: "A Garry's Mod gamemode based on Trouble in Terrorist Town"
 #site_url: 'https://'
 
 # Repository
-repo_name: 'TTT2'
+repo_name: "TTT2"
 repo_url: https://github.com/TTT-2/TTT2/
-edit_uri: https://github.com/TTT-2/docs/edit/master/docs/
+edit_uri: https://github.com/TTT-2/docs/edit/main/docs/
 
 # Configuration
 theme:
-  name: 'material'
-  language: 'en'
+  name: "material"
+  language: "en"
   features:
     - tabs
     - instant
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: "indigo"
+    accent: "indigo"
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: "Roboto"
+    code: "Roboto Mono"
+
+validation:
+  links:
+    absolute_links: relative_to_docs
+    anchors: warn
+    unrecognized_links: warn
 
 # Navigation
 nav:
   - General:
-    - TTT2: 'index.md'
-    - Troubleshooting: 'troubleshooting/index.md'
-    - Role Overview: 'general/roles.md'
-    - Migrating: 'general/migrating.md'
+      - TTT2: "index.md"
+      - Troubleshooting: "troubleshooting/index.md"
+      - Role Overview: "general/roles.md"
+      - Migrating: "general/migrating.md"
   - Server Owners:
-      - Using TTT2: 'server-owners/index.md'
+      - Using TTT2: "server-owners/index.md"
       - Serverinstall Guides:
-        - 'server-owners/manual-install.md'
+          - "server-owners/manual-install.md"
   - Developers:
-      - Creating new Content: 'developers/index.md'
+      - Creating new Content: "developers/index.md"
       - Basics:
-        - 'developers/basics/creating-an-addon.md'
-        - 'developers/basics/code-style.md'
+          - "developers/basics/creating-an-addon.md"
+          - "developers/basics/code-style.md"
       - Content Creation:
-        - 'developers/content-creation/icon-and-design-guideline.md'
-        - 'developers/content-creation/creating-a-role.md'
-        - 'developers/content-creation/creating-a-class.md'
-        - 'developers/content-creation/creating-an-item.md'
-        - 'developers/content-creation/creating-a-weapon.md'
-        - 'developers/content-creation/creating-a-hudelement.md'
-        - 'developers/content-creation/creating-a-hud-theme.md'
-        - 'developers/content-creation/sidebar-population.md'
-        - 'developers/content-creation/using-targetid.md'
-        - 'developers/content-creation/using-event-system.md'
-        - 'developers/content-creation/using-karma.md'
-        - 'developers/content-creation/vskin.md'
-        - 'developers/content-creation/language-support.md'
-        - 'developers/content-creation/sql-orm.md'
+          - "developers/content-creation/icon-and-design-guideline.md"
+          - "developers/content-creation/creating-a-role.md"
+          - "developers/content-creation/creating-a-class.md"
+          - "developers/content-creation/creating-an-item.md"
+          - "developers/content-creation/creating-a-weapon.md"
+          - "developers/content-creation/creating-a-hudelement.md"
+          - "developers/content-creation/creating-a-hud-theme.md"
+          - "developers/content-creation/sidebar-population.md"
+          - "developers/content-creation/using-targetid.md"
+          - "developers/content-creation/using-event-system.md"
+          - "developers/content-creation/using-karma.md"
+          - "developers/content-creation/vskin.md"
+          - "developers/content-creation/language-support.md"
+          - "developers/content-creation/sql-orm.md"
 
 # Customization
 extra:
-  manifest: 'manifest.webmanifest'
+  manifest: "manifest.webmanifest"
   social:
-    - icon: 'fontawesome/brands/github-alt'
-      link: 'https://github.com/TTT-2'
-    - icon: 'fontawesome/brands/steam'
-      link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1357204556'
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/TTT-2"
+    - icon: "fontawesome/brands/steam"
+      link: "https://steamcommunity.com/sharedfiles/filedetails/?id=1357204556"
 
 # Extensions
 markdown_extensions:

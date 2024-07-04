@@ -16,17 +16,17 @@ Your weapon's lua file must be in this format:
 
 Your `*.vmt` and `*.vtf` icon files (what gets shown in the buy menu) will need to be stored in this format:
 
-* `<addon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
-* `<addon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
+- `<addon name>/materials/vgui/ttt/<weapon name>_icon.vtf`
+- `<addon name>/materials/vgui/ttt/<weapon name>_icon.vmt`
 
-The basics about creating icons can be found [here](/developers/content-creation/icon-and-design-guideline/).
+The basics about creating icons can be found [here](/developers/content-creation/icon-and-design-guideline.md).
 
 ### Model Files
 
 Model files for the SWEP will also need to be stored in the addon folder, unless you're using the default ones which come with source games. It's advised that even if you're using non-GMod models that you include them in the addon because not all users will own CS:S or Half life, etc.
 
-* `<addon name>/materials/models/<model folder>/<model name>.vmt`
-* `<addon name>/models/<model files>`
+- `<addon name>/materials/models/<model folder>/<model name>.vmt`
+- `<addon name>/models/<model files>`
 
 Documentation on how to create models will be uploaded soon.
 
@@ -39,7 +39,7 @@ Custom sounds for your SWEP will need to be stored in this folder if you're not 
 `<addon name>/gamemodes/terrortown/content/sound/`
 
 ???+ note
-    Sounds types accepted are: `*.wav`, `*.mp3` and `*.ogg`.
+Sounds types accepted are: `*.wav`, `*.mp3` and `*.ogg`.
 
 GMod default sound paths are found [here](https://wiki.facepunch.com/gmod/Common_Sounds).
 
@@ -52,9 +52,9 @@ Each language file will need to be stored in this format:
 `<addon name>/lua/terrortown/lang/<language folder>/<lang file name>.lua`
 
 ???+ note
-    The language identifier should be unique to prevent clashes with other addons' translations.
+The language identifier should be unique to prevent clashes with other addons' translations.
 
-See the [Language Support](/developers/content-creation/language-support/) page for more information on this topic.
+See the [Language Support](/developers/content-creation/language-support.md) page for more information on this topic.
 
 See the [Creating An Addon](/developers/basics/creating-an-addon.md/#project-structure) page for more info on folder structure.
 
@@ -132,7 +132,7 @@ SWEP.Primary.Recoil = 1.5
 ```
 
 ???+ note
-    All of these attributes can also be applied to SWEP.Secondary which is right click by default.
+All of these attributes can also be applied to SWEP.Secondary which is right click by default.
 
 ```lua
 SWEP.HoldType = "ar2"
@@ -176,19 +176,19 @@ SWEP.Kind = WEAPON_EQUIP1
 ```
 
 | `SWEP.Kind` | `WEAPON_MELEE` | `WEAPON_PISTOL` | `WEAPON_HEAVY` | `WEAPON_NADE` | `WEAPON_CARRY` |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| `SWEP.Slot` | 1 | 2 | 3 | 4 | 5 |
+| :---------: | :------------: | :-------------: | :------------: | :-----------: | :------------: |
+| `SWEP.Slot` |       1        |        2        |       3        |       4       |       5        |
 
 | `SWEP.Kind` | `WEAPON_UNARMED` | `WEAPON_SPECIAL` | `WEAPON_EXTRA` | `WEAPON_CLASS` |
-| :---: | :---: | :---: | :---: | :---: |
-| `SWEP.Slot` | 6 | 7 | 8 | 9 |
+| :---------: | :--------------: | :--------------: | :------------: | :------------: |
+| `SWEP.Slot` |        6         |        7         |       8        |       9        |
 
 ```lua
 -- Which roles can purchase this swep (table)
 SWEP.CanBuy = {ROLE_TRAITOR}
 ```
 
-This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE_<ROLE NAME\>. However the serveradmin can change those values at a later point in the shopeditor found ingame.
+This data is stored in a table, its the roles which can purchase it in the buy menu. Convention is that the keyword for each role is ROLE\_<ROLE NAME\>. However the serveradmin can change those values at a later point in the shopeditor found ingame.
 
 ## Template
 
