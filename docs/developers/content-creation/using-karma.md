@@ -3,7 +3,7 @@
 The mysterious karma system is mostly untouched in TTT2, but karma can now be easily added or subtracted and those changes are shown at the roundendscreen.
 
 ???+ abstract "Round end screen with detailed Karma"
-![Icon Padding](../../assets/images/article/roundend_karma.png)
+    ![Icon Padding](../../assets/images/article/roundend_karma.png)
 
 ## Adding Karma
 
@@ -19,7 +19,7 @@ function KARMA.DoKarmaChange(ply, amount, reason)
 ```
 
 ???+ note
-As an example the reason "karma_teamkill_tooltip" gets localized as seen in the picture at the top.
+    As an example the reason "karma_teamkill_tooltip" gets localized as seen in the picture at the top.
 
     [Check out how to work with language localization.](/developers/content-creation/language-support.md)
 

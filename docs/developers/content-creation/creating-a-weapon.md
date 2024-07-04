@@ -39,7 +39,7 @@ Custom sounds for your SWEP will need to be stored in this folder if you're not 
 `<addon name>/gamemodes/terrortown/content/sound/`
 
 ???+ note
-Sounds types accepted are: `*.wav`, `*.mp3` and `*.ogg`.
+    Sounds types accepted are: `*.wav`, `*.mp3` and `*.ogg`.
 
 GMod default sound paths are found [here](https://wiki.facepunch.com/gmod/Common_Sounds).
 
@@ -52,7 +52,7 @@ Each language file will need to be stored in this format:
 `<addon name>/lua/terrortown/lang/<language folder>/<lang file name>.lua`
 
 ???+ note
-The language identifier should be unique to prevent clashes with other addons' translations.
+    The language identifier should be unique to prevent clashes with other addons' translations.
 
 See the [Language Support](/developers/content-creation/language-support.md) page for more information on this topic.
 
@@ -132,7 +132,7 @@ SWEP.Primary.Recoil = 1.5
 ```
 
 ???+ note
-All of these attributes can also be applied to SWEP.Secondary which is right click by default.
+    All of these attributes can also be applied to SWEP.Secondary which is right click by default.
 
 ```lua
 SWEP.HoldType = "ar2"
