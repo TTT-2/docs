@@ -38,6 +38,9 @@
     |**Yandere & Senpai**|You are an Innocent but you need to guard Senpai to win with him! If Senpai dies or if you mutilate too many corpses you mental state will go down! If you get crazy you will be turned into a powerful Yangire who needs to kill everyone except Senpai!|
     |**Poisoner**|The terrorist who kills you will get poisoned and will lose a lot of health!|
     |**Mute**|Your voice and text chat is not working while you can't equip weapons! You have a very good radar which shows you many information about the other players and you need to convince trustworthy players that your information is valid!|
+    |**Paranoid**|Your spawn with a special item which notifies all players about your death and your body will be visible through walls!|
+    |**Rat**|You will remember the name of a Traitor after some time but be aware that the Traitors will also know your location at that time!|
+    |**Patient**|You need to spread your disease to other terrorists which will suffer from it but after some time will be even stronger than before! Be aware that you are still an Innocent and your main goal should be to spread the disease to the Traitors!|
 
 === "Detective Roles"
 
@@ -60,6 +63,8 @@
     |**Link**|You have not only the shop but also armor, more health and a unique playermodel!|
     |**Hunch**|You see the death of other players but if too many die you will take damage!|
     |**Chef**|You can not only cook but also heal everyone every 10 minutes!|
+    |**Decipherer**|You have a portable tester which can identify the role of a terrorist but be cautious because you can only use it a limited amount of times!|
+    |**Announcer**|You will announce all purchases which are being made in the shops as long as you are alive!|
 
 === "Traitor Roles"
 
@@ -94,6 +99,12 @@
     |**Gambler**|You have no credits and you must use the random items which are given to you at round start!|
     |**Brainwasher**|You have a deagle which converts Innocents to slaves of the Traitors but only for the time you are alive! Eliminate all other terrorists with the help of the Traitors!|
     |**Hanfei**|You have no shop but instead an AK, C4, more health and armor! Your death causes an explosion which is deadly for the enemies around your corpse!|
+    |**Morphling**|You have a special disguiser which allows you to transform into any terrorist, like a perfect clone!|
+    |**Wicked**|You can see the special roles of any terrorist!|
+    |**Janitor**|You have a special gadget which allows you to clean up and destroy bodies but be aware of the cooldown! You can also use it anytime to remove the DNA from a body!|
+    |**Fuse**|You must kill other terrorists quickly otherwise you will explode and cause damage around you!|
+    |**Psycho**|You can't use the shop but you have a special gadget which transforms you into a Psycho! You identity will be disguised, you receive a radar and you will get multiple buffs like more armor, speed and damage!|
+    |**Ambusher**|You project an aura while standing still in which you can see all terrorists! You also deal more damage while standing still!|
 
 === "Neutral Killers"
 
@@ -125,6 +136,7 @@
     |**Heretic**|You have the ability to sacrifice your soul to a demon to receive special powers! All players will be notified about your sacrifice and about the demon you have chosen! You have access to a shop but no credit points at start!|
     |**Speedrunner**|You have to kill everyone quickly before the timer runs out! While the clock is ticking you will receive immunity to death and immense speed but if the timer hits zero you will die permanently!|
     |**Anonymous**|You are like the Serialkiller but you can have friends! Your friends are not known to you and you are weaker than the Serialkiller! Try to kill everyone with caution!|
+    |**Vulture**|You can see through walls and your knife lets you consume bodies to get more health! If you have consumed enough bodies you win but be cautious because you leave evidence behind!|
 
 === "Neutral Roles"
 
@@ -159,6 +171,8 @@
     |**Necrohealiac**|If a player dies you will heal up!|
     |**Collusionist**|You are a Jester role who begs for items! If you receive an item you will also receive the role of the player who gave you the item while he dies!|
     |**Dunce**|You will appear as a Dunce if you have killed a Jester in the previous round! Everyone sees you and you can't damage anyone! You can only win if everyone dies!|
+    |**Alien**|You need to probe enough terrorists to win! You can also use your special gadget to heal other terrorists!|
+    |**Baker & Famine**|The Baker produces bread which can heal other terrorists! The bread also save the terrorists from future famines! If enough pieces of bread are eaten or if the Baker decides to he will turn into Famine who has a lot of health and gets bonus health for every eaten bread! Terrorists who didn't eat any bread will lose health over time!|
     
 ## Reasons to use
 
