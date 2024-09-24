@@ -41,6 +41,8 @@
     |**Paranoid**|Your spawn with a special item which notifies all players about your death and your body will be visible through walls!|
     |**Rat**|You will remember the name of a Traitor after some time but be aware that the Traitors will also know your location at that time!|
     |**Patient**|You need to spread your disease to other terrorists which will suffer from it but after some time will be even stronger than before! Be aware that you are still an Innocent and your main goal should be to spread the disease to the Traitors!|
+    |**Mutant**|You will receive a radar, more max health, increased movement speed and you are immune to prop damage the more damage you receive!|
+    |**Undercover Agent**|You will become the new Detective if the previous one dies!|
 
 === "Detective Roles"
 
