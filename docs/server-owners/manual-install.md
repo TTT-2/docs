@@ -313,7 +313,7 @@ You can now start your server with the following command:
 
 Simply create a Workshop Collection on the Steam Workshop or choose an [existing one](https://steamcommunity.com/workshop/browse/?appid=4000&section=collections).
 If you choose to create your own collection, keep in mind it has to be public or unlisted for the server to see it.
-(I'll be using [this collection](https://steamcommunity.com/sharedfiles/filedetails/?id=2052244154))
+(I'll be using [this collection](https://steamcommunity.com/sharedfiles/filedetails/?id=1379909176))
 Next you need to get the ID of that collection and add it to your server start command:
 
 ```bash
