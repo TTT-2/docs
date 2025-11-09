@@ -45,7 +45,7 @@ To allow param translation, a keyword has to be placed inside curly brackets.
 L["ankh_health_points"] = "Health: {health} / {maxhealth}"
 ```
 
-You can check out an example [here](https://github.com/TTT-2/ttt2-role_pha/tree/master/lua/lang).
+You can check out an example [here](https://github.com/TTT-2/ttt2-role_pha/tree/master/lua/terrortown/lang).
 
 ## Using the Language Strings
 

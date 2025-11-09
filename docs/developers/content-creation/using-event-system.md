@@ -133,7 +133,7 @@ end
 ```
 
 ???+ note
-Synchronization is used in the finish-event to display the latest karma changes on roundendscreen.
+    Synchronization is used in the finish-event to display the latest karma changes on roundendscreen.
 
 ## Cancel or replace an event
 

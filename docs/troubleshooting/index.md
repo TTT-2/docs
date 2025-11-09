@@ -26,7 +26,7 @@ It seems like you are using an incompatible addon on your server. We added an ad
 The sprint key is by default ++shift++, which is the same key as the team voice chat. As the team voice chat always used that key, this is still the intended default. However, if you want to change that key, you can always press ++f1++ and navigate to the `Bindings` section, where you can set a new key.
 
 ### Q3: I have an error, but it has spammed my console, so I can't copy it.
-Please send us your full log. In many cases some errors are caused by previous errors. You can get the full log when you add `-condebug` to the GarrysMod start options in Steam. The log will be saved in `GarrysMod/garrysmod/console.log`. For further information see this [discussion](https://steamcommunity.com/app/4000/discussions/1/1698293068431221842/).
+Please send us your full log. In many cases some errors are caused by previous errors. You can get the full log when you add `-condebug` to the GarrysMod start options in Steam. The log will be saved in `GarrysMod/garrysmod/console.log`.
 
 ### Q4: The server does not work, there's an error with a 'TipIndex'!
 This problem is most likely caused by another error that happened before. Please make sure to check the console / serverlog for possible errors that happened. Usually the first error is the most important one, as it will cause other things to break like a chain-reaction.

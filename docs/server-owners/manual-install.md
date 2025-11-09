@@ -9,7 +9,7 @@ This is a guide for the most 'manual' install you can do. If you want a more aut
     - [Linux Dedicated Server Hosting](https://wiki.facepunch.com/gmod/Linux_Dedicated_Server_Hosting)
     - [Steam Game Server Accounts](https://wiki.facepunch.com/gmod/Steam_Game_Server_Accounts)
     - [Workshop Collection for Dedicated Servers](https://wiki.facepunch.com/gmod/Workshop_for_Dedicated_Servers)
-    - [Known Issues](https://developer.valvesoftware.com/wiki/SteamCMD#Known_issues)
+    - [Known Issues](https://developer.valvesoftware.com/wiki/SteamCMD#Known_Issues)
 
 ## Prerequisites
 
@@ -322,7 +322,7 @@ Next you need to get the ID of that collection and add it to your server start c
 
 ??? question "Find the ID of a collection or Addon"
     You can find the ID of any Workshop Addon/Collection at the end of the URL.
-    [https://steamcommunity.com/sharedfiles/filedetails/?id=**2052244154**](https://steamcommunity.com/sharedfiles/filedetails/?id=2052244154)
+    [https://steamcommunity.com/sharedfiles/filedetails/?id=**1379909176**](https://steamcommunity.com/sharedfiles/filedetails/?id=1379909176)
 
 ### ULX
 

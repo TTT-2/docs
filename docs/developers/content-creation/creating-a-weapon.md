@@ -192,5 +192,5 @@ This data is stored in a table, its the roles which can purchase it in the buy m
 
 ## Template
 
-Here is a [template weapon](https://github.com/cafelargo/TemplateSWEP) for reference to SWEP file structure.
+Here is a [template weapon](https://github.com/TomDotBat/gmod-templates/tree/master/lua/weapons/swep_weapon) for reference to SWEP file structure.
 If you want to do more than change default values to create different conventional SWEPs, view the [weapon_tttbase](https://github.com/TTT-2/TTT2/blob/master/gamemodes/terrortown/entities/weapons/weapon_tttbase.lua) file which ttt2 uses to base its SWEPs on.
