@@ -45,7 +45,7 @@ It’s recommended to use ULX to set it up ingame, there’s an [ULX addon for T
 
 Custom roles are a very big part of TTT2. It adds the possibility to introduce new roles to the game and to change the gameplay to everybodies preferences. All of this is achieved while maintaining an easy to access framework to create new roles and a high level of compatibility.
 
-[Check out this workshop list](https://steamcommunity.com/workshop/filedetails/?id=1357745995) for a overview of roles for TTT2.
+[Check out this workshop list](https://steamcommunity.com/workshop/filedetails/?id=1737053146) for a overview of roles for TTT2.
 
 If you plan on creating your own custom role, check out [this wiki article](https://docs.ttt2.neoxult.de/developers/content-creation/creating-a-role/).
 
