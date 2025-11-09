@@ -1,3 +1,3 @@
 # Code Style
 
-coming soon!
+Soon, but you can help us complete this documentation.

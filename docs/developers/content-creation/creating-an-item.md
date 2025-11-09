@@ -1,3 +1,3 @@
 # Creating an Item
 
-Some Text
+Soon, but you can help us complete this documentation.

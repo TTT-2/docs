@@ -44,7 +44,7 @@ The `classData` argument is a table that contains all the important class settin
 ???+ example "Setting the Language"
     The language for the class consists of two parts: The name and the description. At least the name should be set, but it is good practise to set the description as well.
 
-    The existing language identifiers can be found [inside these files](https://github.com/TTT-2/TTT2/tree/master/gamemodes/terrortown/gamemode/shared/lang). Currently these identifiers exist: `English`, `Deutsch`, `Русский`, `Polski`, `Italiano`
+    The existing language identifiers can be found [inside these files](https://github.com/TTT-2/TTT2/tree/master/lua/terrortown/lang). For example: `en`, `de`, `ru`, `pl`, `it` and many more.
 
     ```lua
     classData.lang = {}

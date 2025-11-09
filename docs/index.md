@@ -23,7 +23,7 @@ TTT2 was the next logical step after TTT was such a massive success. It is a spi
 
 We know that TTT lives from its huge community and all its great addons. Because of this, **compatibility** is one of the highest priorities. Almost every item that works with TTT also works well with TTT2. There are a few minor exceptions though. Addons that modify the HUD, eg. Octagonal HUD, will not work with TTT2. If you plan on creating a new HUD for TTT2, you have to use the way more powerful HUD system from TTT2. Additionally addons that rely on roles may not work as intended with the newly added roles.
 
-Check out [this workshop list](https://steamcommunity.com/sharedfiles/filedetails/?id=1584725582) for addons that were reworked for TTT2.
+Check out [this workshop list](https://steamcommunity.com/sharedfiles/filedetails/?id=1379909176) for addons that were reworked for TTT2.
 
 **Hint:** You do not need addons like “Better Equipment Menu”, “Drowning Indicator” or “TTT Sprint”, because features like these are included in TTT2 by default.
 
@@ -37,7 +37,7 @@ There are a few new gamemodes based on TTT2. Click on these icons to open a list
 
 ## Configuration
 
-It’s recommended to use ULX to set it up ingame, there’s an [ULX addon for TTT2](https://steamcommunity.com/sharedfiles/filedetails/?id=1362430347). Commands for the weaponshop etc are found in [this wiki article](https://github.com/TTT-2/TTT2/wiki/Commands).
+It’s recommended to use ULX to set it up ingame, there’s an [ULX addon for TTT2](https://steamcommunity.com/sharedfiles/filedetails/?id=1362430347). Commands for the weaponshop etc. are found in [this wiki article](https://docs.ttt2.neoxult.de/).
 
 ## Feature Spotlight
 
